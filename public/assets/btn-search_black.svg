@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <rect id="btn-search_black-a" width="2.414" height="14" x="27.596" y="22.51" rx="1.207"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="40" height="40" fill="#000"/>
+    <circle cx="17" cy="17" r="11" stroke="#FFF" stroke-width="2"/>
+    <g transform="rotate(-45 28.803 29.51)">
+      <use fill="#FFF" xlink:href="#btn-search_black-a"/>
+      <rect width="1.414" height="13" x="28.096" y="23.01" stroke="#FFF" rx=".707"/>
+    </g>
+  </g>
+</svg>

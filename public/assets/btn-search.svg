@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="20" viewBox="0 0 50 20">
+  <defs>
+    <rect id="btn-search-a" width="2.105" height="8.421" x="14.737" y="11.579" rx="1.053"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(15)">
+      <circle cx="7.895" cy="7.895" r="6.895" stroke="#000" stroke-width="2"/>
+      <g transform="rotate(-45 15.79 15.79)">
+        <use fill="#000" xlink:href="#btn-search-a"/>
+        <rect width="1.105" height="7.421" x="15.237" y="12.079" stroke="#000" rx=".553"/>
+      </g>
+    </g>
+    <path stroke="#000" d="M1 3L1 18M49 3L49 18"/>
+  </g>
+</svg>
