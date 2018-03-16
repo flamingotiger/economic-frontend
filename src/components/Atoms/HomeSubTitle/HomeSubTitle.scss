@@ -1,0 +1,17 @@
+.subTitle{
+  list-style: none;
+  position:relative;
+  font:1.8rem/2.1rem 'sans-serif';
+  padding-left:2.7rem;
+  &::before{
+    content: '';
+    position:absolute;
+    left:0;
+    background: url('/assets/icon-box.svg');
+    top:0.4rem;
+    width:1.2rem;
+    height:1.2rem;
+    left:0;
+  }
+
+}

@@ -1,0 +1,45 @@
+.footer{
+  width:100%;
+  height:26.4rem;
+  background: url('/assets/bg-main-1.png');
+  .footerTxt{
+    padding-top:4rem;
+    text-align: center;
+    color:#ffffff;
+    font:2.4rem/2.9rem 'sans-serif';
+  }
+  .inputBox{
+    border:0.2rem solid #ffffff;
+    width:40rem; height:3.9rem;
+    margin:auto;
+    margin-top:4.3rem;
+    margin-bottom:4.3rem;
+    input{
+      width:38rem; height:1.9rem;
+      font:1.8rem/3.9rem 'sans-serif';
+      color:#ffffff;
+      background: none;
+      border:0 none;
+      margin:1rem;
+    }
+    ::-webkit-input-placeholder{color:#ffffff;}
+    -moz-placeholder{color:#ffffff;}
+    input-placeholder{
+      color:#ffffff;
+    }
+  }
+  .footerBtn{
+    display: block;
+    border-radius: 14.5rem;
+    background:#0044DC;
+    width:14rem;
+    height:3.9rem;
+    margin:auto;
+    margin-bottom:2.9rem;
+    border:0 none;
+    text-align:center;
+    color:#ffffff;
+    cursor: pointer;
+    font:lighter 1.4rem/3.9rem 'sans-serif';
+  }
+}

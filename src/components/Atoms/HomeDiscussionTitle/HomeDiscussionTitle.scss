@@ -1,0 +1,14 @@
+.HomeDiscussionTitle{position:relative;}
+.title{
+  margin-left:5.3rem;
+  text-align: center; margin-top:2.4rem; margin-bottom:2rem; font:bold 2rem/2.4rem 'sans-serif';
+  &::before{
+    content: '';
+    position: absolute;
+    left:0;
+    top:50%;
+    margin-top:-0.1rem;
+    border-top:0.2rem solid #000000;
+    width:37rem;
+  }
+}
