@@ -1,0 +1,17 @@
+.headList{
+  position:absolute;
+  top:7rem;
+  z-index:100;
+  width:100%;
+  background: #ffffff;
+  height:20rem;
+  .headContainer{
+    width:113rem;
+    height:20rem;
+    margin:auto;
+  }
+  .thumbList{
+    display: flex;
+    margin-top: 2rem;
+  }
+}

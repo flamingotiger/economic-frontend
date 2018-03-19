@@ -27,11 +27,11 @@ toggle = () => {
     render() {
         return(
           <div className={cx('startUpWrapper')}>
-            <HomeTitle homeTitle={this.state.content.homeTitle}/>
+            <HomeTitle homeTitle={this.props.HomeStartUp.content.homeTitle}/>
             <div className={cx('startUpContent')} onClick={this.toggle}>
-              <div className={this.state.toggle ? cx('blur') : cx('blur','on') }>
+              <div className={this.state.toggle ? cx('blur','transform') : cx('blur','transform','on') }>
                 <Link to="/startup">
-                <span>{this.state.content.clickText}</span>
+                <span>{this.props.HomeStartUp.content.clickText}</span>
               </Link>
               </div>
               <div className={cx('post')}>

@@ -11,7 +11,7 @@ class HomeStartUpPostList extends Component {
     this.state={
         post :[
           {
-            img:'assets/dummy-main-3.png',
+            img:'/assets/dummy-main-3.png',
             subTitle:'L’élection surprise de Donald Trump provoque une nouvelle onde de choc',
             text:
             `Once the printer ink runs dry it has to be replaced with another inkjet cartridge.
@@ -28,7 +28,7 @@ class HomeStartUpPostList extends Component {
             `
           },
           {
-            img:'assets/dummy-main-4.png',
+            img:'/assets/dummy-main-4.png',
             subTitle:'L’élection surprise de Donald Trump provoque une nouvelle onde de choc',
             text:
             `Once the printer ink runs dry it has to be replaced with another inkjet cartridge.
@@ -45,7 +45,7 @@ class HomeStartUpPostList extends Component {
             `
           },
           {
-            img:'assets/dummy-main-5.png',
+            img:'/assets/dummy-main-5.png',
             subTitle:'L’élection surprise de Donald Trump provoque une nouvelle onde de choc',
             text:
             `Once the printer ink runs dry it has to be replaced with another inkjet cartridge.

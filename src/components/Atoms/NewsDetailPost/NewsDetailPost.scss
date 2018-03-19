@@ -1,0 +1,23 @@
+.post{
+  margin:1rem;
+  .cate{
+    text-align: center;
+    color:#ffffff;
+    background:#000385;
+    font:1rem/1.3rem 'sans-serif';
+  }
+  .img{
+  }
+  .subTitle{
+    color: #000000;
+    font:bold 1.8rem/2.2rem 'sans-serif';
+    margin-top:1.2rem;
+    margin-bottom:1.2rem;
+    text-align: left;
+  }
+  .text{
+    font:1.4rem/1.6rem 'sans-serif';
+    text-align: justify;
+    overflow: hidden;
+  }
+}
