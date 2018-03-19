@@ -1,2 +1,4 @@
 import HomeContainer from './HomeContainer';
-export {HomeContainer};
+import SliderContainer from './SliderContainer';
+
+export { HomeContainer, SliderContainer };
