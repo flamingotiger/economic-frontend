@@ -27,9 +27,9 @@ class Navigate extends Component{
       <div className={this.state.toggle ? cx('navList','on') : cx('navList')}>
         <ul>
           <li><Link to="/news">ACTUALITES</Link></li>
-          <li><Link to="/">DECOUVERT D’UNE ENTREPRISE</Link></li>
-          <li><Link to="/">DEBAT</Link></li>
-          <li><Link to="/">DONNEES</Link></li>
+          <li><Link to="/startup">DECOUVERT D’UNE ENTREPRISE</Link></li>
+          <li><Link to="/discussion">DEBAT</Link></li>
+          <li><Link to="/data">DONNEES</Link></li>
           <li><Link to="/">CONTACT</Link></li>
           <li><Link to="/">DEVENIR NOTRE RECHERCHER</Link></li>
         </ul>

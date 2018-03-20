@@ -60,9 +60,9 @@ class NewsContentLists extends Component{
         },
       ]
     }
-    this._renderContent = this._renderContent.bind(this);
+    this.renderContent = this.renderContent.bind(this);
   }
-  _renderContent= () => {
+  renderContent= () => {
   const content = this.state.content.map((content,i)=>{
     return <NewsContentList
       img={content.img}
@@ -78,7 +78,7 @@ class NewsContentLists extends Component{
 
   return (
     <div className={cx('listContainer')}>
-      {this._renderContent()}
+      {this.renderContent()}
     </div>
   )
   }

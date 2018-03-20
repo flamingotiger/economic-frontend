@@ -27,9 +27,9 @@ class NewsDetailPostList extends Component {
           }
         ]
     }
-    this._renderPost = this._renderPost.bind(this);
+    this.renderPost = this.renderPost.bind(this);
 }
-_renderPost = () => {
+renderPost = () => {
   const post = this.state.post.map((post,i) => {
     return <NewsDetailPost
       cate={post.cate}
@@ -45,7 +45,7 @@ _renderPost = () => {
     render() {
         return(
           <ul className={cx('postList')}>
-            {this._renderPost()}
+            {this.renderPost()}
           </ul>
         );
     }

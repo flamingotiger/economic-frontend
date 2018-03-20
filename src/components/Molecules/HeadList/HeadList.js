@@ -2,48 +2,34 @@ import React, {Component} from 'react';
 import styles from './HeadList.scss';
 import classNames from 'classnames/bind';
 import { HeadThumb } from '../../Atoms';
+import HorizontalScroll from 'react-scroll-horizontal'
 
 const cx = classNames.bind(styles);
 
 class HeadList extends Component{
   constructor(props){
     super(props);
-    this.state={
-        content:[
-          {
-            img:'dummy-main-6.png'
-          },
-          {
-            img:'dummy-main-6.png'
-          },
-          {
-            img:'dummy-main-6.png'
-          },
-          {
-            img:'dummy-main-6.png'
-          },
-          {
-            img:'dummy-main-6.png'
-          }
-        ]
-    }
-    this._renderHead = this._renderHead.bind(this);
+    this.renderHead = this.renderHead.bind(this);
   }
-  _renderHead = () => {
-    const headThum = this.state.content.map((content,i)=>{
-      return <HeadThumb
+  renderHead = () => {
+    const headThumb = this.props.headList.map((content,i)=>{
+      return <div className={cx('headThumb')} key={i}>
+        <HeadThumb
         img={content.img}
-        key={i}
+        url={content.url}
       />
+  </div>
     })
-    return headThum
+    return headThumb
   }
   render(){
   return (
-    <div className={cx('headList')}>
-      <div className={cx('headContainer')}>
-        <ul className={cx('thumbList')}>
-          {this._renderHead()}
+    <div className={this.props.toggle? cx('headList','transform','on') : cx('headList','transform') }>
+      <div className={cx('headWrapper')}>
+        <ul className={cx('headContainer')}>
+            <HorizontalScroll>
+              {this.renderHead()}
+            </HorizontalScroll>
         </ul>
       </div>
     </div>
