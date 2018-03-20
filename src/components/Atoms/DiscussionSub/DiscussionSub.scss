@@ -1,0 +1,39 @@
+.sublist{
+  width:59.3rem;
+  margin:0 2.5rem;
+  .red{
+    background: #710c0c;
+  }
+  .blue{
+    background: #0b0494;
+  }
+  .scroll{
+      max-height:69rem;
+      overflow: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+      width: 0px;  /* remove scrollbar space */
+      background: transparent;  /* optional: just make scrollbar invisible */
+    }
+  }
+  .title{
+    width:59.3rem;
+    height:4rem;
+    text-align: center;
+    color:#ffffff;
+    font:1.4rem/4rem "sans-serif";
+  }
+  img{width:55.4rem; height:38.4rem; margin:auto;}
+  .subTitle{
+    color:#000000;
+    font:bold 2.4rem/3.1rem "sans-serif";
+    margin-top:0.5rem;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+  }
+  .text{
+    color:#000000;
+    font:1.2rem/1.6rem "sans-serif";
+    text-align: justify;
+  }
+}
