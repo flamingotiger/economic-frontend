@@ -10,7 +10,7 @@ class HomePage extends Component {
     render() {
         return(
           <div>
-            <section className={cx('wrapper')}>
+            <section className={cx('mainWrapper')}>
               <div className={cx('mainImg')}>
                 <div className={cx('mainImgs')}>
                   <div className={cx('mainImgsBg','transform')}></div>
