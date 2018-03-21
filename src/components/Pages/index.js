@@ -10,7 +10,8 @@ import StartUpDetailPage from './StartUpDetailPage';
 import StartUpPage from './StartUpPage';
 import Nomatch from './Nomatch';
 
-export { DataPage,
+export {
+          DataPage,
           DiscussionDetailPage,
           DiscussionPage,
           DiscussionSubPage,

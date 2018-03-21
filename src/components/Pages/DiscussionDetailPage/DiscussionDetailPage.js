@@ -44,7 +44,7 @@ class DiscussionDetailPage extends Component {
     this.handleRightChange = this.handleRightChange.bind(this);
   }
   handleLeftChange=()=>{
-    if(this.state.toggleIndex == 1 ){
+    if(this.state.toggleIndex === 1 ){
       this.setState({
         toggleIndex:0,
         toggle:!this.state.toggle
@@ -52,7 +52,7 @@ class DiscussionDetailPage extends Component {
     }
   }
   handleRightChange=()=>{
-    if(this.state.toggleIndex == 0 ){
+    if(this.state.toggleIndex === 0 ){
       this.setState({
         toggleIndex:1,
         toggle:!this.state.toggle

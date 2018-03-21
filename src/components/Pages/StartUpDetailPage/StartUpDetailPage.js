@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import classNames from 'classnames/bind';
-import styles from './StartUpDetailPage.css';
-import { HeadUtil } from '../../Atoms';
+import './StartUpDetailPage.css';
+import { HeadUtil, StartUpDetailContent } from '../../Atoms';
 import { Navigate } from '../../Molecules';
 import Swiper from 'react-id-swiper';
-
-const cx = classNames.bind(styles);
 
 class StartUpDetailPage extends Component {
   constructor(props){
@@ -18,22 +15,46 @@ class StartUpDetailPage extends Component {
           day:"Publication on 2017. 11. 30 ",
           news:"ENTREPRISE A CONNAOTRE"
         },
+      content:[
+        {
+          title:"Leader du marché de voiture electrique ",
+          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+        },
+        {
+          title:"Leader du marché de voiture electrique ",
+          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+        },
+        {
+          title:"Leader du marché de voiture electrique ",
+          img:"/assets/dummy-start_up2.png",
+          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+        }
+      ]
     }
+    this.renderContent = this.renderContent.bind(this);
+  }
+  renderContent = ()=>{
+    const content = this.state.content.map((content, i)=>{
+      return <StartUpDetailContent
+        title={content.title}
+        img={content.img}
+        text={content.text}
+        key={i}
+      />
+    })
+    return content
   }
     render() {
       const params = {
-          direction: 'vertical',
-          loop:true,
+          //direction: 'vertical',
+          //loop:true,
            pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            renderBullet: (index, className) => {
-              return '<span class="' + className + '">' + (index + 1) + '</span>';
-            },
           }
        };
         return(
-          <div className={cx('wrapper')}>
+          <div className='wrapper'>
             <Navigate/>
             <HeadUtil
               util={this.state.date.util}
@@ -42,30 +63,29 @@ class StartUpDetailPage extends Component {
               day={this.state.date.day}
               news={this.state.date.news}
             />
-          <div className={cx('startupWrapper')}>
-
-            <div className={cx('startupContainer')}>
-              <div className={cx('startupSlider')}>
-                <Swiper {...params} className={cx('slider')}>
-                  <div className={cx('sliderImg')}><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
-                  <div className={cx('sliderImg')}><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
-                  <div className={cx('sliderImg')}><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
+          <div className='startupWrapper'>
+            <div className='startupContainer'>
+              <div className='startupSlider'>
+                <Swiper {...params} className='slider'>
+                  <div className='sliderImg'><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
+                  <div className='sliderImg'><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
+                  <div className='sliderImg'><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
                 </Swiper>
               </div>
-              <div className={cx('startupSlider')}>
+              <div className='startupSlider'>
                 BYD
-                leader~~~
-                leader~~~
-                leader~~~
-                leader~~~
+                Leader du marché de voiture electrique
+                Leader du marché de voiture electrique
+                Leader du marché de voiture electrique
+                Leader du marché de voiture electrique
+                Leader du marché de voiture electrique
               </div>
             </div>
             <div>
-              본
-            </div>
-
+              {this.renderContent()}
             </div>
           </div>
+        </div>
         );
     }
 }
