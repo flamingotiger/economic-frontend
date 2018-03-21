@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './DiscussionDetail.scss';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -12,15 +11,15 @@ const DiscussionDetail = ({background, cate, title, subTitle, text01, text02, im
           <span className={cx('cate')}>{cate}</span>
           <span>{title}</span>
         </div>
-        <div className={cx('detailText','scroll')}>
-          <div className={cx('text01')}>
+        <div className={cx('detailText')}>
+          <div className={cx('text01','scroll')}>
             <div className={cx('mainImg')}>
               <img src={img}  alt="thumb"/>
             </div>
             <div className={cx('subTitle')}>{subTitle}</div>
             <div className={cx('text')}>{text01}</div>
           </div>
-          <div className={cx('text02')}>
+          <div className={cx('text02','scroll')}>
             <div className={cx('text')}>{text02}</div>
             <div className={cx('subImg')}>
               <img src={subImg}  alt="thumb"/>

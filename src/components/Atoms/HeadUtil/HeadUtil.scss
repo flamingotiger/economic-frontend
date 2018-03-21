@@ -1,6 +1,6 @@
 .headTitle{position:relative; width:113rem; display: flex; margin:auto; margin-top: 3.7rem; border-bottom:0.2rem solid #000000; justify-content: space-between; margin-bottom:2.4rem;}
 .util{
-  font:1.4rem/1.4rem 'sans-serif';
+  font:1.4rem/1.4rem "IBMPlexSans","sans-serif";
   vertical-align: bottom;
   line-height: 3.1rem;
   span{
@@ -8,6 +8,6 @@
   }
 }
 
-.title{cursor:pointer; font:2.4rem/2.4rem 'sans-serif'; vertical-align: bottom; line-height: 3.1rem; margin-left: -9rem;}
-.day{font:1.4rem/1.4rem 'sans-serif'; vertical-align: bottom; line-height: 3.1rem;}
-.news{position:absolute; font:1.8rem/2.4rem 'sans-serif'; vertical-align: bottom; line-height: 3.1rem; bottom: -3.5rem; }
+.title{cursor:pointer; font:2.4rem/2.4rem "IBMPlexSans","sans-serif"; vertical-align: bottom; line-height: 3.1rem; margin-left: -9rem;}
+.day{font:1.4rem/1.4rem "IBMPlexSans","sans-serif"; vertical-align: bottom; line-height: 3.1rem;}
+.news{position:absolute; font:1.8rem/2.4rem "IBMPlexSans","sans-serif"; vertical-align: bottom; line-height: 3.1rem; bottom: -3.5rem; }

@@ -9,7 +9,7 @@
   a{color:#ffffff;}
   ul{margin-top:13.8rem; margin-left:5.2rem;}
   ul>li{
-    margin-bottom:3.2rem; font:1.8rem/2.4rem 'sans-serif';
+    margin-bottom:3.2rem; font:1.8rem/2.4rem "IBMPlexSans","sans-serif";
     position:relative;
   }
   ul>li:hover::after{
@@ -31,14 +31,14 @@
 .lang{
   width:20.6rem; margin-left:5.2rem; margin-top:20.8rem;
   border-bottom:0.1rem solid #ffffff;
-  span{display: block; color:#ffffff; font:1.8rem/2.4rem 'sans-serif';}
+  span{display: block; color:#ffffff; font:1.8rem/2.4rem "IBMPlexSans","sans-serif";}
   select{
     height:2.9rem;
     width:20.6rem;
     border:0 none;
     background:none;
     color: #ffffff;
-    font:1.8rem/2.4rem 'sans-serif';
+    font:1.8rem/2.4rem "IBMPlexSans","sans-serif";
     -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
