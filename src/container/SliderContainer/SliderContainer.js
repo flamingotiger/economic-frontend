@@ -385,7 +385,7 @@ class SliderContainer extends Component{
       }
   render(){
     const gallerySwiperParams = {
-          spaceBetween: 10,
+          //spaceBetween: 10,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -394,12 +394,13 @@ class SliderContainer extends Component{
         };
 
         const thumbnailSwiperParams = {
-          paceBetween: 10,
+          //spaceBetween: 10,
           centeredSlides: true,
           touchRatio: 0.2,
           slideToClickedSlide: true,
           loop:true,
           slidesPerView: 1,
+          simulateTouch:false//touch stop
         };
     return(
       <div className='sliderWrapper'>
