@@ -6,7 +6,7 @@ import HomeSubTitle from './HomeSubTitle';
 import HomeDiscussionTitle from './HomeDiscussionTitle';
 import HomeStartUpPost from './HomeStartUpPost';
 import NewsTitle from './NewsTitle';
-import Footer from './Footer';
+import Subscribe from './Subscribe';
 import NewsContentList from './NewsContentList';
 import NewsDetailPost from './NewsDetailPost';
 import NewsListPost from './NewsListPost';
@@ -16,6 +16,7 @@ import DiscussionSub from './DiscussionSub';
 import DiscussionDetail from './DiscussionDetail';
 import DataList from './DataList';
 import StartUpDetailContent from './StartUpDetailContent';
+import StartUpScroll from './StartUpScroll';
 
 export {
   Slide,
@@ -27,13 +28,14 @@ export {
   HomeDiscussionTitle,
   HomeStartUpPost,
   NewsTitle,
-  Footer,
+  Subscribe,
   NewsContentList,
   NewsDetailPost,
   NewsListPost,
   StartUpPost,
+  StartUpScroll,
   DiscussionSub,
   DiscussionList,
   DiscussionDetail,
-  DataList
+  DataList,
 };

@@ -1,14 +1,22 @@
-.dataChart.on{
+.chart.on{
   visibility: visible;
   position:relative;
   width:110rem; height:30.8rem; border:0.1rem solid #3b3a3a; box-sizing: border-box;
   transition: all .3s ease;
+  .chartContainer{display: block;}
 }
-.dataChart{
+.chart{
   transition: all .3s ease;
   visibility: hidden;
   position:relative;
   width:110rem; height:0; border:0.1rem solid #3b3a3a; box-sizing: border-box;
+  .chartContainer{display: none;}
+}
+.chartContainer{
+  width:98rem;
+  height:28rem;
+  margin:auto;
+  margin-top:1.7rem;
 }
 .data{
   width:110rem;
