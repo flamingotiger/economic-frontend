@@ -14,7 +14,7 @@ class DiscussionDetailPage extends Component {
       date : {
           util:"11111MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
-          title:"",
+          title:"DEBAT",
           day:"Publication on 2017. 11. 30 ",
           news:""
         },

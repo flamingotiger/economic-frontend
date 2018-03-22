@@ -30,6 +30,7 @@
 }
 .lang{
   width:20.6rem; margin-left:5.2rem; margin-top:20.8rem;
+  position:relative;
   border-bottom:0.1rem solid #ffffff;
   span{display: block; color:#ffffff; font:1.8rem/2.4rem "IBMPlexSans","sans-serif";}
   select{
@@ -40,13 +41,22 @@
     color: #ffffff;
     font:1.8rem/2.4rem "IBMPlexSans","sans-serif";
     -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     option{
       margin-left:0.5rem;
       border:0 none;
       background:none;
     }
   }
-
+  &::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:1.05rem;
+    width:1.7rem;
+    height:0.8rem;
+    background:url(/assets/btn-down-languge.svg) no-repeat;
+  }
 }

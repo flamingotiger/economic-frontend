@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './NewsListPage.scss';
-import { HeadUtil,NewsListPost } from '../../Atoms';
+import { HeadUtil, NewsListPost } from '../../Atoms';
 import { Navigate } from '../../Molecules';
 const cx = classNames.bind(styles);
 
@@ -10,11 +10,10 @@ class NewsListPage extends Component {
     super(props);
     this.state={
       keyword: '',
-      search: false,
       date : {
           util:"11111MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
-          title:"DÉCEMBRE 2018",
+          title:"ACTUALITES",
           day:"Publication on 2017. 11. 30 ",
           news:"ACTUALITE DE CE MOIS-CI"
         },
@@ -60,8 +59,6 @@ class NewsListPage extends Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
-    this.renderContent = this.renderContent.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
   handleChange(e){
      /* event-handler first parameter e : event object */
@@ -73,28 +70,6 @@ class NewsListPage extends Component {
          search: true
      })
    }
-   renderContent= () => {
-   const content = this.state.content.map((content,i)=>{
-     return <NewsListPost
-       img={content.img}
-       date={content.date}
-       key={i}
-     />
-     })
-     return content
-   }
-   handleKeyPress = (e) => {
-       if (e.charCode === 13) {
-         this.setState({
-           search: true
-         });
-       }
-       if (e.keyCode === 13) {
-         this.setState({
-           search: true
-         });
-       }
-    }
 
     render() {
       const mapToComponents = (content) => {
@@ -129,10 +104,9 @@ class NewsListPage extends Component {
                   onKeyPress={this.handleKeyPress}
                   placeholder="search" />
               </div>
-              <button className={cx('searchBtn')} onClick={this.handleSearch}><img src="/assets/btn-search_black.svg" alt="btn"/></button>
               </div>
               <ul className={cx('listContainer')}>
-                {this.state.search ?  mapToComponents(this.state.content) : this.renderContent()}
+                {mapToComponents(this.state.content)}
               </ul>
             </div>
           </div>

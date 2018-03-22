@@ -1,3 +1,12 @@
+.startupdetailTitle{
+  display: block;
+  text-align: center;
+  margin:auto;
+  font:bold 2.4rem/3.2rem "IBMPlexSans","sans-serif";
+  margin-top:10rem;
+  margin-bottom:5.2rem;
+}
+
 .wrapper{width:95%; margin:auto; margin-bottom:6.2rem;}
 .startupWrapper{
   padding-top:1.3rem;
@@ -9,14 +18,24 @@
   position: relative;
   margin-bottom:5.8rem;
 }
+.sliderBg{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#000000;
+  height:3.8rem;
+  z-index:100;
+  opacity: 0.5;
+}
 .startupSlider{
   flex:1;
   overflow:hidden;
   height:66.5rem;
   border:0.1rem solid #000000;
   box-sizing: border-box;
+  position:relative;
 }
-.slider{}
 .sliderImg{
   width:47.8rem;
   height:66.5rem;
@@ -33,6 +52,7 @@
   background:rgba(255,255,255,0) !important;
   border-radius:unset !important;
   opacity:1 !important;
+  z-index:1000 !important;
 }
 .swiper-pagination-bullet-active{
   background:rgba(255,255,255,1) !important;

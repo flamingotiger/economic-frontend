@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './HomePage.scss';
-import { Footer } from '../../Atoms';
+import { Subscribe } from '../../Atoms';
 import { SliderContainer } from '../../../container';
+import { HomeNavigate } from '../../Molecules';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -18,11 +20,9 @@ class HomePage extends Component {
                   <img src="/assets/dummy-main-0.png" alt=""/>
                 </div>
                 <div className={cx('center')}>
-                  <div className={cx('centerTxt')}>J’aimerais bien connaitre une vraie économie</div>
                   <div className={cx('centerLine')}>
-                  </div>
-                  <div className={cx('centerLogo')}>
-                    <img src="/assets/logo-main.svg" alt=""/>
+                    <HomeNavigate />
+                    <div className={cx('centerTxt')}>J’aimerais bien connaitre une vraie économie</div>
                   </div>
                 </div>
                 <div className={cx('mainImgs')}>
@@ -33,7 +33,15 @@ class HomePage extends Component {
               </div>
             </section>
             <SliderContainer/>
-            <Footer/>
+            <Subscribe/>
+            <div className={cx('footer')}>
+              <div className={cx('footerInner')}>
+                <div className={cx('footerText')}>
+                  <div><Link to="/">RECREUTEMENT</Link></div>
+                  <div><Link to="/">CONTACT</Link></div>
+                </div>
+              </div>
+            </div>
           </div>
         );
     }

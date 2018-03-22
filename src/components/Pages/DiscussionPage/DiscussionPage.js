@@ -11,11 +11,10 @@ class DiscussionPage extends Component {
     super(props);
     this.state={
       keyword: '',
-      search: false,
       date : {
           util:"11111MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
-          title:"",
+          title:"DEBAT",
           day:"Publication on 2017. 11. 30 ",
           news:""
         },
@@ -71,46 +70,12 @@ class DiscussionPage extends Component {
       ]
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
-    this.renderContent = this.renderContent.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
   handleChange(e){
      /* event-handler first parameter e : event object */
      let keywordStr = e.target.value;
      this.setState({keyword: keywordStr, search: false });
    }
-   handleSearch=()=>{
-       this.setState({
-         search: true
-     })
-   }
-   renderContent= () => {
-     const content = this.state.discussionList.map((content,i)=>{
-       return <DiscussionList
-         date={content.date}
-         title={content.title}
-         leftImg={content.leftImg}
-         leftThumb={content.leftThumb}
-         rightImg={content.rightImg}
-         rightThumb={content.rightThumb}
-         key={i}
-       />
-      })
-       return content
-     }
-   handleKeyPress = (e) => {
-       if (e.charCode === 13) {
-         this.setState({
-           search: true
-         });
-       }
-       if (e.keyCode === 13) {
-         this.setState({
-           search: true
-         });
-       }
-    }
     render() {
       const mapToComponents = (discussionList) => {
          discussionList = discussionList.filter((contact) => {
@@ -149,10 +114,9 @@ class DiscussionPage extends Component {
                     onKeyPress={this.handleKeyPress}
                     placeholder="search" />
                 </div>
-                <button className={cx('searchBtn')} onClick={this.handleSearch}><img src="/assets/btn-search_black.svg" alt="btn"/></button>
                 </div>
                 <ul className={cx('listContainer')}>
-                  {this.state.search ?  mapToComponents(this.state.discussionList) : this.renderContent()}
+                  {mapToComponents(this.state.discussionList)}
                 </ul>
               </div>
           </div>

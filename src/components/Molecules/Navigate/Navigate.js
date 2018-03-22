@@ -26,6 +26,7 @@ class Navigate extends Component{
       </div>
       <div className={this.state.toggle ? cx('navList','on') : cx('navList')}>
         <ul>
+          <li><Link to="/">HOME</Link></li>
           <li><Link to="/news">ACTUALITES</Link></li>
           <li><Link to="/startup">DECOUVERT D’UNE ENTREPRISE</Link></li>
           <li><Link to="/discussion">DEBAT</Link></li>
@@ -36,9 +37,8 @@ class Navigate extends Component{
         <div className={cx('lang')}>
           <span>langue</span>
           <select>
-            <option value=""></option>
-            <option value="Eng">Eng</option>
-            <option value="Kor">Kor</option>
+            <option value="FRANCAIS">FRANCAIS</option>
+            <option value="ANGLAIS">ANGLAIS</option>
           </select>
           </div>
       </div>
