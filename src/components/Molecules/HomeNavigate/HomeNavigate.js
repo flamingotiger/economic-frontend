@@ -35,8 +35,8 @@ class HomeNavigate extends Component{
         </div>
         <div className={cx('navBgBotton')}>
           <ul>
-            <li><Link to="/">CONTACT</Link></li>
-            <li><Link to="/">DEVENIR NOTRE<br/>RECHERCHER</Link></li>
+            <li><Link to="/contact">CONTACT</Link></li>
+            <li><Link to="/recrutement">DEVENIR NOTRE<br/>RECHERCHER</Link></li>
           </ul>
           <div className={cx('lang')}>
             <select>

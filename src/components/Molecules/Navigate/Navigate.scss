@@ -27,7 +27,18 @@
 .navList.on{
   display: block; transition: all .2s ease; opacity: 1;
   visibility: visible;
+  ul>li.on::after{
+    content: '';
+    position: absolute;
+    left: -3rem;
+    top: 0.4rem;
+    z-index: 1000;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(/assets/icon-nav-round.svg) no-repeat;
+  }
 }
+
 .lang{
   width:20.6rem; margin-left:5.2rem; margin-top:20.8rem;
   position:relative;

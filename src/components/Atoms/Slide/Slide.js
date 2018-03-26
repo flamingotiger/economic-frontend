@@ -8,15 +8,16 @@ const cx = classNames.bind(styles);
 class Slide extends Component{
 
   render(){
+    const { title, date, img } = this.props.Slide;
     return(
       <div className={cx('slideImg')}>
         <dl className={cx('sliderTxt')}>
           <Link to="news/list">
-            <dt className={cx('sliderTitle')}>{this.props.title}</dt>
-            <dd className={cx('sliderDate')}>{this.props.date}</dd>
+            <dt className={cx('sliderTitle')}>{title}</dt>
+            <dd className={cx('sliderDate')}>{date}</dd>
           </Link>
         </dl>
-        <img src={`/assets/${this.props.img}`} alt="bannerImg"/>
+        <img src={`/assets/${img}`} alt="bannerImg"/>
       </div>
     );
   }

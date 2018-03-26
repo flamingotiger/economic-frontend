@@ -54,6 +54,19 @@ class HomeData extends Component {
             ]
           }
     }
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange = (e) => {
+    this.setState({
+      keyword:e.target.value
+    })
+  }
+  handleKeyPress = (e) => {
+    if(e.which === 13 || e.keyCode === 13){
+      window.location.href = `/data:${this.state.keyword}`
+
+    }
   }
     render() {
       const options={
@@ -89,7 +102,11 @@ class HomeData extends Component {
                   <input
                     name="keyword"
                     value={this.state.keyword}
-                    placeholder="search" />
+                    placeholder="search"
+                    onChange={this.handleChange}
+                    onKeyPress={this.handleKeyPress}
+                    autoComplete="off"
+                    />
                 </div>
               </div>
               <div className={cx('chartContainer')}>

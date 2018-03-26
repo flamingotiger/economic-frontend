@@ -1,7 +1,7 @@
 import React, {Component}from 'react';
 import styles from './Navigate.scss';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -9,7 +9,7 @@ class Navigate extends Component{
   constructor(props){
     super(props);
     this.state={
-      toggle:false
+      toggle:false,
     }
     this._toggle=this._toggle.bind(this);
   }
@@ -20,19 +20,19 @@ class Navigate extends Component{
   }
   render(){
   return (
-    <div className={cx('navigator')}>
+    <nav className={cx('navigator')}>
       <div className={cx('navIcon')} onClick={this._toggle}>
         <img src="/assets/logo-main.svg" alt="naviIcon"/>
       </div>
       <div className={this.state.toggle ? cx('navList','on') : cx('navList')}>
         <ul>
-          <li><Link to="/">HOME</Link></li>
-          <li><Link to="/news">ACTUALITES</Link></li>
-          <li><Link to="/startup">DECOUVERT D’UNE ENTREPRISE</Link></li>
-          <li><Link to="/discussion">DEBAT</Link></li>
-          <li><Link to="/data">DONNEES</Link></li>
-          <li><Link to="/">CONTACT</Link></li>
-          <li><Link to="/">DEVENIR NOTRE RECHERCHER</Link></li>
+          <li className={this.props.idx === 0 ? cx('on') : null}><NavLink to="/">HOME</NavLink></li>
+          <li className={this.props.idx === 1 ? cx('on') : null}><NavLink to="/news">ACTUALITES</NavLink></li>
+          <li className={this.props.idx === 2 ? cx('on') : null}><NavLink to="/startup">DECOUVERT D’UNE ENTREPRISE</NavLink></li>
+          <li className={this.props.idx === 3 ? cx('on') : null}><NavLink to="/discussion">DEBAT</NavLink></li>
+          <li className={this.props.idx === 4 ? cx('on') : null}><NavLink to="/data">DONNEES</NavLink></li>
+          <li className={this.props.idx === 5 ? cx('on') : null}><NavLink to="/contact">CONTACT</NavLink></li>
+          <li className={this.props.idx === 6 ? cx('on') : null}><NavLink to="/recrutement">DEVENIR NOTRE RECHERCHER</NavLink></li>
         </ul>
         <div className={cx('lang')}>
           <span>langue</span>
@@ -42,7 +42,7 @@ class Navigate extends Component{
           </select>
           </div>
       </div>
-    </div>
+    </nav>
   )
   }
 }

@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const NewsDetailPost = ({cate,subTitle, text, img}) => {
   return (
     <li className={cx('post')}>
-      <Link to="/">
+      <Link to="/news/list/detail:post">
         <div className={cx('cate')}>{cate}</div>
         <div className={cx('img')}><img src={img} alt="img"/></div>
         <div className={cx('subTitle')}>{subTitle}</div>

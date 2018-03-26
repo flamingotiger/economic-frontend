@@ -17,6 +17,7 @@ import DiscussionDetail from './DiscussionDetail';
 import DataList from './DataList';
 import StartUpDetailContent from './StartUpDetailContent';
 import StartUpScroll from './StartUpScroll';
+import Footer from './Footer';
 
 export {
   Slide,
@@ -38,4 +39,5 @@ export {
   DiscussionList,
   DiscussionDetail,
   DataList,
+  Footer
 };

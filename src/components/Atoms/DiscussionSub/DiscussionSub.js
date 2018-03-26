@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const DiscussionSub = ({cate, subTitle, img, text, background, url}) => {
   return (
       <div className={cx('sublist')}>
-        <Link to="/discussion/sub/detail">
+        <Link to={`/discussion/sub/detail:${url}`}>
         <div className={background ? cx('title','red') : cx('title','blue')}>{cate}</div>
         <div className={cx('scroll')}>
           <img src={img}  alt="img"/>
@@ -19,5 +19,4 @@ const DiscussionSub = ({cate, subTitle, img, text, background, url}) => {
       </div>
   )
 }
-
 export default DiscussionSub;
