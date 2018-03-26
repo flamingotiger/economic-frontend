@@ -85,8 +85,8 @@ class NewsListPage extends Component {
           });
       };
         return(
-          <div className={cx('wrapper')}>
-            <Navigate/>
+          <div className={cx('newsListWrapper')}>
+            <Navigate idx={1}/>
               <HeadUtil
                 util={this.state.date.util}
                 catemenu={this.state.date.catemenu}
@@ -102,7 +102,9 @@ class NewsListPage extends Component {
                   value={this.state.keyword}
                   onChange={this.handleChange}
                   onKeyPress={this.handleKeyPress}
-                  placeholder="search" />
+                  placeholder="search"
+                  autoComplete="off"
+                  />
               </div>
               </div>
               <ul className={cx('listContainer')}>

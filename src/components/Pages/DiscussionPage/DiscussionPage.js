@@ -96,7 +96,7 @@ class DiscussionPage extends Component {
       };
         return(
           <div className={cx('disWrapper')}>
-            <Navigate/>
+            <Navigate idx={3}/>
               <HeadUtil
                 util={this.state.date.util}
                 catemenu={this.state.date.catemenu}
@@ -104,7 +104,7 @@ class DiscussionPage extends Component {
                 day={this.state.date.day}
                 news={this.state.date.news}
               />
-              <div className={cx('newsList')}>
+              <div className={cx('disList')}>
                 <div className={cx('search')}>
                 <div className={cx('searchInput')}>
                   <input
@@ -112,7 +112,9 @@ class DiscussionPage extends Component {
                     value={this.state.keyword}
                     onChange={this.handleChange}
                     onKeyPress={this.handleKeyPress}
-                    placeholder="search" />
+                    placeholder="search"
+                    autoComplete="off"
+                    />
                 </div>
                 </div>
                 <ul className={cx('listContainer')}>

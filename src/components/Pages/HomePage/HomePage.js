@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './HomePage.scss';
-import { Subscribe } from '../../Atoms';
+import { Subscribe, Footer } from '../../Atoms';
 import { SliderContainer } from '../../../container';
 import { HomeNavigate } from '../../Molecules';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -32,16 +31,9 @@ class HomePage extends Component {
                 </div>
               </div>
             </section>
-            <SliderContainer/>
-            <Subscribe/>
-            <div className={cx('footer')}>
-              <div className={cx('footerInner')}>
-                <div className={cx('footerText')}>
-                  <div><Link to="/">RECREUTEMENT</Link></div>
-                  <div><Link to="/">CONTACT</Link></div>
-                </div>
-              </div>
-            </div>
+            <SliderContainer />
+            <Subscribe />
+            <Footer />
           </div>
         );
     }

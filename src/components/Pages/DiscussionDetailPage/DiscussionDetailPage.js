@@ -59,10 +59,24 @@ class DiscussionDetailPage extends Component {
       })
     }
   }
+  componentDidMount(){
+    if(this.props.match.params.pros === ":contre"){
+      this.setState({
+        toggle:true,
+        toggleIndex:0
+      })
+    }
+    else if(this.props.match.params.pros === ":pour"){
+      this.setState({
+        toggle:false,
+        toggleIndex:1
+      })
+    }
+  }
     render() {
         return(
           <div className={cx('disDetailwrapper')}>
-            <Navigate/>
+            <Navigate idx={3}/>
               <HeadUtil
                 util={this.state.date.util}
                 catemenu={this.state.date.catemenu}

@@ -16,6 +16,11 @@ class StartUpDetailPage extends Component {
           day:"Publication on 2017. 11. 30 ",
           news:"ENTREPRISE A CONNAOTRE"
         },
+      menuImg:[
+        "/assets/dummy-start_up.png",
+        "/assets/dummy-start_up.png",
+        "/assets/dummy-start_up.png",
+      ],
       menuList:[
         {
           idx:1,
@@ -136,9 +141,13 @@ class StartUpDetailPage extends Component {
             clickable: true,
           }
        };
+
+       const renderMapImg = this.state.menuImg.map((img, i) => {
+        return <div className='sliderImg' key={i}><div className='sliderBg'></div><img src={img} alt="swiperImg"/></div>
+        })
         return(
-          <div className='wrapper'>
-            <Navigate/>
+          <div className='startUpDetail'>
+            <Navigate idx={2}/>
             <HeadUtil
               util={this.state.date.util}
               catemenu={this.state.date.catemenu}
@@ -149,11 +158,8 @@ class StartUpDetailPage extends Component {
           <div className='startupWrapper'>
             <div className='startupContainer'>
               <div className='startupSlider'>
-                <div className='sliderBg'></div>
-                <Swiper {...params} className='slider'>
-                  <div className='sliderImg'><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
-                  <div className='sliderImg'><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
-                  <div className='sliderImg'><img src="/assets/dummy-start_up.png" alt="swiperImg"/></div>
+                <Swiper {...params} >
+                  {renderMapImg}
                 </Swiper>
               </div>
               <div className='startupSlider'>

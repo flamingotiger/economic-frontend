@@ -9,6 +9,10 @@ import NewsPage from './NewsPage';
 import StartUpDetailPage from './StartUpDetailPage';
 import StartUpPage from './StartUpPage';
 import Nomatch from './Nomatch';
+import Contact from './Contact';
+import Recrutement from './Recrutement';
+import RecrutementSuccess from './RecrutementSuccess';
+import ContactSuccess from './ContactSuccess';
 
 export {
           DataPage,
@@ -21,5 +25,9 @@ export {
           NewsPage,
           StartUpDetailPage,
           StartUpPage,
-          Nomatch
+          Nomatch,
+          Contact,
+          ContactSuccess,
+          Recrutement,
+          RecrutementSuccess
         };

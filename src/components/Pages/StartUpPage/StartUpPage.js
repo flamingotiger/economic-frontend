@@ -151,8 +151,8 @@ class StartUpPage extends Component {
           });
       };
         return(
-          <div className={cx('wrapper')}>
-            <Navigate/>
+          <div className={cx('startupWrapper')}>
+            <Navigate idx={2}/>
             <div onClick={this.toggle}>
               <HeadUtil
                 util={this.state.date.util}
@@ -163,7 +163,7 @@ class StartUpPage extends Component {
               />
             </div>
             <HeadList toggle={this.state.toggle} headList={this.state.headList}/>
-            <div className={cx('newsList')}>
+            <div className={cx('startupList')}>
               <div className={cx('search')}>
               <div className={cx('searchInput')}>
                 <input
@@ -171,7 +171,9 @@ class StartUpPage extends Component {
                   value={this.state.keyword}
                   onChange={this.handleChange}
                   onKeyPress={this.handleKeyPress}
-                  placeholder="search" />
+                  placeholder="search"
+                  autoComplete="off"
+                  />
               </div>
               </div>
               <ul className={cx('listContainer')}>

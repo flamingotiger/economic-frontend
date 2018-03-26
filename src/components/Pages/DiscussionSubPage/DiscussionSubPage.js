@@ -37,7 +37,7 @@ class DiscussionSubPage extends Component {
     render() {
         return(
           <div className={cx('wrapper')}>
-            <Navigate/>
+            <Navigate idx={3}/>
               <HeadUtil
                 util={this.state.date.util}
                 catemenu={this.state.date.catemenu}

@@ -29,7 +29,7 @@ class NewsPage extends Component {
     render() {
         return(
           <div className={cx('wrapper')}>
-            <Navigate/>
+            <Navigate idx={1}/>
               <HeadUtil
                 util={this.state.date.util}
                 catemenu={this.state.date.catemenu}

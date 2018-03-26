@@ -7,7 +7,7 @@
   margin-bottom:5.2rem;
 }
 
-.wrapper{width:95%; margin:auto; margin-bottom:6.2rem;}
+.startUpDetail{width:95%; margin:auto; margin-bottom:6.2rem;}
 .startupWrapper{
   padding-top:1.3rem;
   position: relative; width:95%; margin:auto; margin-top:2.7rem;
@@ -17,6 +17,9 @@
   width:95.8rem; margin:auto;
   position: relative;
   margin-bottom:5.8rem;
+}
+.sliderImg{
+  position: relative;
 }
 .sliderBg{
   position:absolute;
@@ -271,7 +274,7 @@
   transition: 300ms opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  z-index: 10;
+  z-index: 1000;
 }
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;

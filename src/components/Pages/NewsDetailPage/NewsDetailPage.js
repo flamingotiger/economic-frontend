@@ -81,6 +81,11 @@ class NewsDetailPage extends Component {
           img:'dummy-main-6.png'
         },
       ],
+      largeImg : "",
+      thumbImg : [
+          " /assets/dummy-main-6.png ",
+          " /assets/dummy-main-7.png "
+      ],
       date : {
           util:"11111MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
@@ -94,16 +99,33 @@ class NewsDetailPage extends Component {
       }
     }
     this.toggle=this.toggle.bind(this);
+    this.handleClick = this.handleClick.bind (this);
   }
   toggle = () => {
     this.setState({
       toggle:!this.state.toggle
     });
   }
+  handleClick = (e) => {
+    const imgSrc = e.target.getAttribute('src');
+        this.setState ({
+          largeImg : imgSrc
+        })
+  }
+  componentWillMount(){
+       this.setState({
+         largeImg: this.state.thumbImg[0]
+       })
+     }
     render() {
+      const thumbImg = this.state.thumbImg.map((img, i) =>
+        <li className={cx('thumbImg')} key={i} onClick={this.handleClick}>
+          <img src={img} alt="china"/>
+        </li>
+      )
         return(
-          <div className={cx('wrapper')}>
-            <Navigate/>
+          <div className={cx('newsDetailwrapper')}>
+            <Navigate idx={1}/>
             <div onClick={this.toggle}>
               <HeadUtil
                 util={this.state.date.util}
@@ -114,19 +136,14 @@ class NewsDetailPage extends Component {
               />
             </div>
             <HeadList toggle={this.state.toggle} headList={this.state.headList}/>
-            <div className={cx('newsWrapper')}>
+            <div className={cx('newsDetailContainer')}>
               <div className={cx('left','col')}>
                 <div className={cx('leftImg')}>
-                  <img src="/assets/dummy-main-6.png" alt="img"/>
+                  <img src={this.state.largeImg} alt="img"/>
                 </div>
                 <div className={cx('thumb')}>
                   <ul className={cx('thumbContainer')}>
-                    <li className={cx('thumbImg')}>
-                      <img src="/assets/dummy-main-7.png" alt="china"/>
-                    </li>
-                    <li className={cx('thumbImg','on')}>
-                      <img src="/assets/dummy-main-6.png" alt="china"/>
-                    </li>
+                    {thumbImg}
                   </ul>
                 </div>
               </div>

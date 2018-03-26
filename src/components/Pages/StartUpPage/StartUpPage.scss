@@ -1,3 +1,9 @@
+.startupWrapper{position:relative; margin-bottom:6.2rem;
+}
+.startupList{
+  width:113rem;
+  margin:auto;
+}
 .searchInput{
   width:40rem;
   height:4rem;
@@ -11,6 +17,7 @@
     margin-left:0.5rem;
     border:0 none;
     background:none;
+    font:1.4rem/1.8rem "IBMPlexSans","sans-serif";
   }
 }
 .searchBtn{

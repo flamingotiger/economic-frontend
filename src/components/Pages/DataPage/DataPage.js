@@ -248,6 +248,13 @@ class DataPage extends Component {
        let keywordStr = e.target.value;
        this.setState({keyword: keywordStr, search: false });
      }
+     componentWillMount(){
+       if(this.props.match.params.search){
+         this.setState({
+           keyword:this.props.match.params.search.slice(1)
+         })
+       }
+     }
     render() {
       const mapToComponents = (data) => {
          data = data.filter((contact) => {
@@ -266,7 +273,7 @@ class DataPage extends Component {
       };
         return(
           <div className={cx('dateWrapper')}>
-            <Navigate/>
+            <Navigate idx={4}/>
               <HeadUtil
                 util={this.state.date.util}
                 catemenu={this.state.date.catemenu}
@@ -282,7 +289,7 @@ class DataPage extends Component {
                     value={this.state.keyword}
                     onChange={this.handleChange}
                     onKeyPress={this.handleKeyPress}
-                    placeholder="search" />
+                    placeholder="search" autoComplete="off"/>
                 </div>
                 </div>
                 <ul className={cx('listContainer')}>
