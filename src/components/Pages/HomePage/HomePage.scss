@@ -1,6 +1,8 @@
 .mainImg{
   display: flex;
   position:relative;
+  max-height: 84rem;
+  min-height:64rem;
   .mainImgs:hover{
     .mainImgsBg{
       opacity:0;
