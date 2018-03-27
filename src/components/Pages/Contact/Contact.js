@@ -11,17 +11,71 @@ class Contact extends Component {
     super(props);
     this.state={
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"",
           day:"Publication on 2017. 11. 30 ",
           news:""
         },
+      name:"",
+      fname:"",
+      email:"",
+      pay:"",
+      title:""
     }
-    this.handleSuccess=this.handleSuccess.bind(this);
+    this.handleCheck=this.handleCheck.bind(this);
+    this.nameInput= this.nameInput.bind(this);
+    this.fnameInput= this.fnameInput.bind(this);
+    this.emailInput= this.emailInput.bind(this);
+    this.paySelect= this.paySelect.bind(this);
+    this.titleSelect= this.titleSelect.bind(this);
   }
-  handleSuccess = () => {
+  handleCheck = (e) => {
+    if(this.state.name === ""){
+      alert("필수입력");
+      return false
+    }else if(this.state.fname === ""){
+      alert("필수입력");
+      return false
+    }else if(this.state.email === ""){
+      alert("필수입력");
+      return false
+    }else if(this.state.pay === ""){
+      alert("필수입력");
+      return false
+    }else if(this.state.title === ""){
+      alert("필수입력");
+      return false
+    }
+    this.setState({
+      typeOfSubmit: 'contact'
+    },this.refs.form.submit);
     this.props.history.push("/contact:success");
+  }
+  nameInput= (e) => {
+    this.setState({
+      name: e.target.value
+    })
+  }
+  fnameInput= (e) => {
+    this.setState({
+      fname: e.target.value
+    })
+  }
+  emailInput= (e) => {
+    this.setState({
+      email: e.target.value
+    })
+  }
+  paySelect= (e) => {
+    this.setState({
+      pay: e.target.value
+    })
+  }
+  titleSelect= (e) => {
+    this.setState({
+      title: e.target.value
+    })
   }
     render() {
         return(
@@ -36,32 +90,32 @@ class Contact extends Component {
               />
             <div className={cx('contactInner')}>
               <span className={cx('contactTitle')}>NOUS ECRIRE</span>
-              <form method="post" action="">
+              <form method="post" action="" ref="form">
                 <fieldset>
-                  <div className={cx('input')}><input type="text" name="text" placeholder="NOM*"/></div>
-                  <div className={cx('input','right')}><input type="text" name="text" placeholder="PRENOM*"/></div>
-                  <div className={cx('input')}><input type="text" name="text" placeholder="EMAIL*"/></div>
-                  <select className={cx('select','right')}>
-                    <option value="PAYS">PAYS*</option>
-                    <option value="">PAYS</option>
-                    <option value="">PAYS</option>
+                  <div className={cx('input')}><input type="text" name="name" placeholder="NOM*" onChange={this.nameInput}/></div>
+                  <div className={cx('input','right')}><input type="text" name="fname" placeholder="PRENOM*" onChange={this.fnameInput}/></div>
+                  <div className={cx('input')}><input type="text" name="email" placeholder="EMAIL*" onChange={this.emailInput}/></div>
+                  <select className={cx('select','right')} name="pay" onChange={this.paySelect} >
+                    <option value="">PAYS*</option>
+                    <option value="PAYS">PAYS</option>
+                    <option value="PAYS">PAYS</option>
                   </select>
-                  <div className={cx('input')}><input type="text" name="text" placeholder="PROFESSION"/></div>
+                  <div className={cx('input')}><input type="text" name="job" placeholder="PROFESSION"/></div>
                 </fieldset>
                 <fieldset className={cx('obligatoires')}>
                   <legend className={cx('title')}>*Champs obligatoires</legend>
-                  <select className={cx('select')}>
+                  <select className={cx('select')} name="title" onChange={this.titleSelect}>
                     <option value="OBJET">OBJET*</option>
-                    <option value="">OBJET</option>
-                    <option value="">OBJET</option>
+                    <option value="OBJET">OBJET</option>
+                    <option value="OBJET">OBJET</option>
                   </select>
                   <div className={cx('birdImg')}><img src="/assets/img-contact-bird.png" alt="brid"/></div>
-                  <textarea>
-
+                  <textarea name="txt">
+                    {this.props.txt}
                   </textarea>
                   <span className={cx('text')}>Conformément à l'article 34 de la loi Informatique et Libertés du 6 juin 1978, nous vous rappelons que vous disposez d'un droit d'accès, de modification et de suppression des données qui vous concernent. Pour l'exercer, adressez-vous à Chaporoyal Lyon</span>
                 </fieldset>
-                <button className={cx('contactBtn')} type="submit" onClick={this.handleSuccess}>ENVOYER</button>
+                <button className={cx('contactBtn')} type="button" onClick={this.handleCheck}>ENVOYER</button>
               </form>
             </div>
             <Footer />
@@ -69,5 +123,4 @@ class Contact extends Component {
         );
     }
 }
-
 export default Contact;

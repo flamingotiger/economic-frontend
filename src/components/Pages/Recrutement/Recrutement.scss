@@ -11,7 +11,7 @@
   .cateList{
     margin-bottom:1.5rem;
     margin-top:5rem;
-    li{
+    label{
       box-sizing: border-box;
       display: inline-block;
       cursor:pointer;
@@ -21,12 +21,22 @@
       height:6rem;
       font:1.2rem/6rem "IBMPlexSans","sans-serif";
       text-align: center;
+      position: relative;
     }
-    .on{
+    input{
+      cursor:pointer;
+      display: none;
+      width:14.8rem;
+      height:6rem;
+      top:0;
+      left:0;
+      position: absolute;
+    }
+    label.on{
       background: #3b3a3a;
       color:#ffffff;
     }
-    li:last-of-type{
+    label:last-of-type{
       margin-right:0;
     }
   }
