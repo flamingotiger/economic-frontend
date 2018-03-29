@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import classNames from 'classnames/bind';
 import styles from './NewsPage.scss';
 import { HeadUtil } from '../../Atoms';
-import { Navigate, NewsContent, NewsContentLists } from '../../Molecules';
+import { Navigate, NewsContent } from '../../Molecules';
 import { Link } from 'react-router-dom';
+import { NewsContentList } from '../../Atoms';
 
 const cx = classNames.bind(styles);
 
@@ -12,42 +13,86 @@ class NewsPage extends Component {
     super(props);
     this.state={
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"ACTUALITES",
           day:"Publication on 2017. 11. 30 ",
           news:"ACTUALITE DE CE MOIS-CI"
         },
-        content : {
-          newsTitle:"L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
-          img:'dummy-main-4.png',
-          text:`Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges. Replacing inkjet cartridge can add to a very big cost. It could be worse if you have to replace the empty cartridges frequently every month. Nowadays many buyers are making use of compatible Inkjet Cartridges as they are less expensive and are easily available online. These compatible inkjet cartridges are available from the third party at a much lower price. These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins to dry and finally clogs the nozzle. You can refill the cartridge once it reaches its wear out condition. Always remember to refill the cartridge as early as possible.With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.          With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.          Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges. Replacing inkjet cartridge can add to a very big cost. It could be worse if you have to replace the empty cartridges frequently every month. Nowadays many buyers are making use of compatible Inkjet Cartridges as they are less expensive and are easily available online. These compatible inkjet cartridges are available from the third party at a much lower price. These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins to dry and finally clogs the nozzle. You can refill the cartridge once it reaches its wear out condition. Always remember to refill the cartridge as early as possible.          With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.          With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.`
-        }
+      content:{},
+      loading:false,
+      id:0
     }
+    this.renderContent = this.renderContent.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
+  componentDidMount(){
+    this.contentData();
+  }
+  contentData = async () => {
+    const content = await this.callData();
+    this.setState({
+      content,
+      loading:true
+    })
+  }
+  callData = () => {
+    return fetch('https://honghakbum.github.io/economic/data.json')
+    .then(response => response.json() )
+    .then(json => json.actualites)
+    .catch(err => console.log(err))
+  }
+  handleClick=(e) => {
+    this.setState({
+      id: Number(e.target.getAttribute("data-key"))
+    })
+  }
+  renderContent= () => {
+  const content = this.state.content.map((content,i)=>{
+    return <NewsContentList
+      img={content.img}
+      cate={content.cate}
+      date={content.date}
+      subTitle={content.subTitle}
+      key={i}
+      id={content.id}
+      getId={this.handleClick}
+    />
+    })
+    return content
   }
     render() {
+      const { date, content, loading } = this.state
         return(
           <div className={cx('wrapper')}>
             <Navigate idx={1}/>
               <HeadUtil
-                util={this.state.date.util}
-                catemenu={this.state.date.catemenu}
-                title={this.state.date.title}
-                day={this.state.date.day}
-                news={this.state.date.news}
+                util={date.util}
+                catemenu={date.catemenu}
+                title={date.title}
+                day={date.day}
+                news={date.news}
               />
             <div className={cx('newsWrapper')}>
               <div className={cx('detail','col')}>
-                <Link to="/news/list/detail">
+                <Link to={`/news/list/detail:${this.state.id}`}>
+                  {loading ?
                   <NewsContent
-                    content={this.state.content}
-                    />
+                    content={content[this.state.id]}
+                    /> : "Loading"
+                  }
                 </Link>
+                <div className={cx('whiteGradient')}></div>
               </div>
               <div className={cx('line')}></div>
               <div className={cx('list','col')}>
-                <NewsContentLists/>
+                  <div className={cx('listContainer')}>
+                  {loading ?
+                    this.renderContent()
+                    : "Loading"
+                  }
+                  </div>
               </div>
               </div>
             </div>

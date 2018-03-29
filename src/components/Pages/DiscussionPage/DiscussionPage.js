@@ -11,63 +11,15 @@ class DiscussionPage extends Component {
     super(props);
     this.state={
       keyword: '',
+      loading:false,
+      discontent:{},
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"DEBAT",
           day:"Publication on 2017. 11. 30 ",
           news:""
         },
-      discussionList:[
-          {
-            date:"DECEMBER 2018",
-            title:"MONDIALISATION1",
-            leftImg:"/assets/dummy-discussion-0.png",
-            leftThumb:"/assets/dummy-main-0.png",
-            rightImg:"/assets/dummy-discussion-1.png",
-            rightThumb:"/assets/dummy-main-01.png",
-          },
-          {
-            date:"DECEMBER 2018",
-            title:"MONDIALISATION2",
-            leftImg:"/assets/dummy-discussion-0.png",
-            leftThumb:"/assets/dummy-main-0.png",
-            rightImg:"/assets/dummy-discussion-1.png",
-            rightThumb:"/assets/dummy-main-01.png",
-          },
-          {
-            date:"DECEMBER 2018",
-            title:"MONDIALISATION3",
-            leftImg:"/assets/dummy-discussion-0.png",
-            leftThumb:"/assets/dummy-main-0.png",
-            rightImg:"/assets/dummy-discussion-1.png",
-            rightThumb:"/assets/dummy-main-01.png",
-          },
-          {
-            date:"DECEMBER 2018",
-            title:"MONDIALISATION4",
-            leftImg:"/assets/dummy-discussion-0.png",
-            leftThumb:"/assets/dummy-main-0.png",
-            rightImg:"/assets/dummy-discussion-1.png",
-            rightThumb:"/assets/dummy-main-01.png",
-          },
-          {
-            date:"DECEMBER 2018",
-            title:"MONDIALISATION5",
-            leftImg:"/assets/dummy-discussion-0.png",
-            leftThumb:"/assets/dummy-main-0.png",
-            rightImg:"/assets/dummy-discussion-1.png",
-            rightThumb:"/assets/dummy-main-01.png",
-          },
-          {
-            date:"DECEMBER 2018",
-            title:"MONDIALISATION6",
-            leftImg:"/assets/dummy-discussion-0.png",
-            leftThumb:"/assets/dummy-main-0.png",
-            rightImg:"/assets/dummy-discussion-1.png",
-            rightThumb:"/assets/dummy-main-01.png",
-          },
-      ]
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -76,13 +28,32 @@ class DiscussionPage extends Component {
      let keywordStr = e.target.value;
      this.setState({keyword: keywordStr, search: false });
    }
+
+   componentDidMount(){
+     this.discontentData();
+   }
+   discontentData = async () => {
+     const discontent = await this.callData();
+     this.setState({
+       discontent,
+       loading:true
+     })
+   }
+   callData = () => {
+     return fetch('https://honghakbum.github.io/economic/debat.json')
+     .then(response => response.json() )
+     .then(json => json.debat)
+     .catch(err => console.log(err))
+   }
+
     render() {
-      const mapToComponents = (discussionList) => {
-         discussionList = discussionList.filter((contact) => {
+      console.log(this.state.discontent)
+      const mapToComponents = (discontent) => {
+         discontent = discontent.filter((contact) => {
            return contact.title.toLowerCase().indexOf(this.state.keyword) > -1;
            /* 0, 1 */
          });
-         return discussionList.map((content,i) => {
+         return discontent.map((content,i) => {
               return <DiscussionList
                 date={content.date}
                 title={content.title}
@@ -91,9 +62,11 @@ class DiscussionPage extends Component {
                 rightImg={content.rightImg}
                 rightThumb={content.rightThumb}
                 key={i}
+                url={content.id}
                 />
           });
       };
+      const {discontent, loading} = this.state
         return(
           <div className={cx('disWrapper')}>
             <Navigate idx={3}/>
@@ -118,7 +91,7 @@ class DiscussionPage extends Component {
                 </div>
                 </div>
                 <ul className={cx('listContainer')}>
-                  {mapToComponents(this.state.discussionList)}
+                  {loading ? mapToComponents(discontent) : null}
                 </ul>
               </div>
           </div>

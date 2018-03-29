@@ -10,12 +10,13 @@ class DiscussionSubPage extends Component {
     super(props);
     this.state={
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"DEBAT",
           day:"Publication on 2017. 11. 30 ",
           news:""
         },
+      discontent:[],
       contre:{
               url:"contre",
               background:true,
@@ -34,7 +35,25 @@ class DiscussionSubPage extends Component {
           },
     }
   }
+  componentDidMount(){
+    this.discontentData();
+  }
+  discontentData = async () => {
+    const discontent = await this.callData();
+    this.setState({
+      discontent,
+      loading:true
+    })
+  }
+  callData = () => {
+     return fetch('https://honghakbum.github.io/economic/debat.json')
+     .then(response => response.json() )
+     .then(json => json.debat)
+     .catch(err => console.log(err))
+  }
     render() {
+      const paramsId = Number(this.props.match.params.id.slice(1));
+      const {discontent} = this.state
         return(
           <div className={cx('wrapper')}>
             <Navigate idx={3}/>

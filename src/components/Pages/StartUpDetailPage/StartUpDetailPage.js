@@ -10,7 +10,7 @@ class StartUpDetailPage extends Component {
     super(props);
     this.state={
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"DECOUVERT D’UNE ENTREPRISE",
           day:"Publication on 2017. 11. 30 ",

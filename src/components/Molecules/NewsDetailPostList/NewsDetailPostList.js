@@ -9,43 +9,50 @@ class NewsDetailPostList extends Component {
   constructor(props){
     super(props);
     this.state={
-        post :[
-          {
-            cate:'POLITIQUE',
-            img:'/assets/dummy-main-3.png',
-            subTitle:'What Makes Flyers Unrivaled',
-          },
-          {
-            cate:'POLITIQUE',
-            img:'/assets/dummy-main-4.png',
-            subTitle:'What Makes Flyers Unrivaled',
-          },
-          {
-            cate:'POLITIQUE',
-            img:'/assets/dummy-main-5.png',
-            subTitle:'What Makes Flyers Unrivaled',
-          }
-        ]
     }
     this.renderPost = this.renderPost.bind(this);
 }
 renderPost = () => {
-  const post = this.state.post.map((post,i) => {
-    return <NewsDetailPost
-      cate={post.cate}
-      subTitle={post.subTitle}
-      text = {post.text}
-      key={i}
-      img = {post.img}
-      />
-  })
-  return post;
+  const content = this.props.content
+  return [
+    <NewsDetailPost
+      key={0}
+      cate={content[0].cate}
+      subTitle={content[0].subTitle}
+      text = {content[0].text}
+      img = {content[0].img}
+      url = {content[0].id}
+      hideText = {true}
+      />,
+      <NewsDetailPost
+        key={1}
+        cate={content[1].cate}
+        subTitle={content[1].subTitle}
+        text = {content[1].text}
+        img = {content[1].img}
+        url = {content[1].id}
+        hideText = {true}
+        />,
+      <NewsDetailPost
+        key={2}
+        cate={content[2].cate}
+        subTitle={content[2].subTitle}
+        text = {content[2].text}
+        img = {content[2].img}
+        url = {content[2].id}
+        hideText = {true}
+        />
+  ]
 }
-
     render() {
+    const {loading} = this.props
         return(
           <ul className={cx('postList')}>
-            {this.renderPost()}
+            {loading ?
+              this.renderPost()
+             :
+              "loading"
+            }
           </ul>
         );
     }

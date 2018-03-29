@@ -82,24 +82,21 @@ class NewsDetailPage extends Component {
         },
       ],
       largeImg : "",
-      thumbImg : [
-          " /assets/dummy-main-6.png ",
-          " /assets/dummy-main-7.png "
-      ],
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"ACTUALITES",
           day:"Publication on 2017. 11. 30 ",
           news:"ACTUALITE DE CE MOIS-CI"
         },
-      content:{
-        newsTitle:"PSA forcé d'importer de plus en plus de moteurs made in China",
-        text:`Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges. Replacing inkjet cartridge can add to a very big cost. It could be worse if you have to replace the empty cartridges frequently every month. Nowadays many buyers are making use of compatible Inkjet Cartridges as they are less expensive and are easily available online. These compatible inkjet cartridges are available from the third party at a much lower price. These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins to dry and finally clogs the nozzle. You can refill the cartridge once it reaches its wear out condition. Always remember to refill the cartridge as early as possible.`
-      }
+      content:{},
+      loading:false,
+      thumbClick:false
     }
     this.toggle=this.toggle.bind(this);
-    this.handleClick = this.handleClick.bind (this);
+    this.handleClick = this.handleClick.bind(this);
+    this.renderThumb = this.renderThumb.bind(this);
+    this.renderLarge = this.renderLarge.bind(this);
   }
   toggle = () => {
     this.setState({
@@ -109,20 +106,56 @@ class NewsDetailPage extends Component {
   handleClick = (e) => {
     const imgSrc = e.target.getAttribute('src');
         this.setState ({
-          largeImg : imgSrc
+          largeImg : imgSrc,
+          thumbClick : true
         })
   }
-  componentWillMount(){
-       this.setState({
-         largeImg: this.state.thumbImg[0]
-       })
+   componentWillMount(){
+       this.contentData();
+   }
+   contentData = async () => {
+     const content = await this.callData();
+     this.setState({
+       content,
+       loading:true,
+     })
+   }
+   callData = () => {
+     return fetch('https://honghakbum.github.io/economic/data.json')
+     .then(response => response.json() )
+     .then(json => json.actualites)
+     .catch(err => console.log(err))
+   }
+   renderThumb = () => {
+     const paramsId =  Number(this.props.match.params.id.slice(1))
+     return [
+       <li key={1} className={cx('thumbImg')} onClick={this.handleClick}>
+         <img src={`/assets/${this.state.content[paramsId].img}`} alt="img"/>
+       </li>,
+       <li key={2} className={cx('thumbImg')} onClick={this.handleClick}>
+         <img src={`/assets/${this.state.content[paramsId].img1}`} alt="img"/>
+       </li>,
+       <li key={3} className={cx('thumbImg')} onClick={this.handleClick}>
+         <img src={`/assets/${this.state.content[paramsId].img2}`} alt="img"/>
+       </li>
+     ]
+   }
+
+   renderLarge = (click) => {
+     const paramsId =  Number(this.props.match.params.id.slice(1))
+     if(click){
+       return [
+         <img key={1} src={this.state.largeImg} alt="img"/>
+       ]
+     }else{
+       return [
+         <img key={1} src={`/assets/${this.state.content[paramsId].img}`} alt="img"/>
+       ]
      }
+   }
     render() {
-      const thumbImg = this.state.thumbImg.map((img, i) =>
-        <li className={cx('thumbImg')} key={i} onClick={this.handleClick}>
-          <img src={img} alt="china"/>
-        </li>
-      )
+      const paramsId =  Number(this.props.match.params.id.slice(1))
+      const { content, loading, thumbClick } = this.state
         return(
           <div className={cx('newsDetailwrapper')}>
             <Navigate idx={1}/>
@@ -139,23 +172,34 @@ class NewsDetailPage extends Component {
             <div className={cx('newsDetailContainer')}>
               <div className={cx('left','col')}>
                 <div className={cx('leftImg')}>
-                  <img src={this.state.largeImg} alt="img"/>
+                  { loading ?
+                    thumbClick ? this.renderLarge(true) : this.renderLarge(false)
+                    : "loading"
+                  }
                 </div>
                 <div className={cx('thumb')}>
                   <ul className={cx('thumbContainer')}>
-                    {thumbImg}
+                    {loading ?
+                      this.renderThumb()
+                    : "Loading" }
                   </ul>
                 </div>
               </div>
               <div className={cx('right','col')}>
-                <NewsContent
-                    content={this.state.content}
-                />
+                {loading ?
+                  <div className={cx('rightContent')}>
+                    <NewsContent
+                        content={content[paramsId]}
+                        hideImg={true}
+                    />
+                  </div>
+                : "Loading"
+                }
               <div className={cx('post')}>
                 <div className={cx('postTitle')}>
                   More interresting news
                 </div>
-                <NewsDetailPostList/>
+                <NewsDetailPostList content={content} loading={loading}/>
               </div>
             </div>
             </div>

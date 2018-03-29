@@ -11,7 +11,7 @@ class NewsListPage extends Component {
     this.state={
       keyword: '',
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"ACTUALITES",
           day:"Publication on 2017. 11. 30 ",
