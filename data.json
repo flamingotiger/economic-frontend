@@ -2,6 +2,7 @@
   "actualites":[
       {
         "id":0,
+        "cate":'POLITIQUE',
         "newsTitle":"9L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-4.png",
         "img1":"dummy-main-4.png",
@@ -13,6 +14,7 @@
       },
       {
         "id":1,
+        "cate":'ECONOMIC',
         "newsTitle":"8L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-5.png",
         "img1":"dummy-main-5.png",
@@ -24,6 +26,7 @@
       },
       {
         "id":2,
+        "cate":'POLITIQUE',
         "newsTitle":"7L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-6.png",
         "img1":"dummy-main-6.png",
@@ -35,6 +38,7 @@
       },
       {
         "id":3,
+        "cate":'POLITIQUE',
         "newsTitle":"6L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-7.png",
         "img1":"dummy-main-7.png",
@@ -46,6 +50,7 @@
       },
       {
         "id":4,
+        "cate":'POLITIQUE',
         "newsTitle":"5L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-4.png",
         "img1":"dummy-main-4.png",
@@ -57,6 +62,7 @@
       },
       {
         "id":5,
+        "cate":'POLITIQUE',
         "newsTitle":"4L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-5.png",
         "img1":"dummy-main-5.png",
@@ -68,6 +74,7 @@
       },
       {
         "id":6,
+        "cate":'POLITIQUE',
         "newsTitle":"3L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-6.png",
         "img1":"dummy-main-6.png",
@@ -79,6 +86,7 @@
       },
       {
         "id":7,
+        "cate":'POLITIQUE',
         "newsTitle":"2L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-7.png",
         "img1":"dummy-main-7.png",
@@ -90,6 +98,7 @@
       },
       {
         "id":8,
+        "cate":'POLITIQUE',
         "newsTitle":"1L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-4.png",
         "img1":"dummy-main-4.png",
