@@ -47,7 +47,6 @@ class DiscussionPage extends Component {
    }
 
     render() {
-      console.log(this.state.discontent)
       const mapToComponents = (discontent) => {
          discontent = discontent.filter((contact) => {
            return contact.title.toLowerCase().indexOf(this.state.keyword) > -1;

@@ -11,6 +11,8 @@ class DiscussionDetailPage extends Component {
     this.state={
       toggle:true,
       toggleIndex:0,
+      id:0,
+      discontent:{},
       date : {
           util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
@@ -42,6 +44,8 @@ class DiscussionDetailPage extends Component {
     }
     this.handleLeftChange = this.handleLeftChange.bind(this);
     this.handleRightChange = this.handleRightChange.bind(this);
+    this.renderDetial1 = this.renderDetial1.bind(this);
+    this.renderDetia2l = this.renderDetial2.bind(this);
   }
   handleLeftChange=()=>{
     if(this.state.toggleIndex === 1 ){
@@ -59,30 +63,80 @@ class DiscussionDetailPage extends Component {
       })
     }
   }
+  discontentData = async () => {
+    const discontent = await this.callData();
+    this.setState({
+      discontent,
+      loading:true
+    })
+  }
+  callData = () => {
+     return fetch('https://honghakbum.github.io/economic/debat.json')
+     .then(response => response.json() )
+     .then(json => json.debat)
+     .catch(err => console.log(err))
+  }
   componentDidMount(){
-    if(this.props.match.params.pros === ":contre"){
+    this.discontentData();
+    if(this.props.match.params.pros.substr(0,7) === ":contre"){
       this.setState({
         toggle:true,
-        toggleIndex:0
+        toggleIndex:0,
+        id:Number(this.props.match.params.pros.slice(7))
       })
     }
-    else if(this.props.match.params.pros === ":pour"){
+    else if(this.props.match.params.pros.substr(0,5) === ":pour"){
       this.setState({
         toggle:false,
-        toggleIndex:1
+        toggleIndex:1,
+        id:Number(this.props.match.params.pros.slice(5))
       })
     }
   }
+  renderDetial1 = () => {
+    const detail1 = this.state.discontent[this.state.id].detail1
+    return [
+      <DiscussionDetail
+        key={this.state.id}
+        cate={detail1.cate}
+        background={detail1.background}
+        title={detail1.title}
+        subTitle={detail1.subTitle}
+        img={detail1.img}
+        subImg={detail1.subImg}
+        text01={detail1.text01}
+        text02={detail1.text02}
+      />
+    ]
+  }
+  renderDetial2 = () => {
+    const detail2 = this.state.discontent[this.state.id].detail2
+    return [
+      <DiscussionDetail
+        key={this.state.id}
+        cate={detail2.cate}
+        background={detail2.background}
+        title={detail2.title}
+        subTitle={detail2.subTitle}
+        img={detail2.img}
+        subImg={detail2.subImg}
+        text01={detail2.text01}
+        text02={detail2.text02}
+      />
+    ]
+  }
+
     render() {
+      const {loading, date} = this.state
         return(
           <div className={cx('disDetailwrapper')}>
             <Navigate idx={3}/>
               <HeadUtil
-                util={this.state.date.util}
-                catemenu={this.state.date.catemenu}
-                title={this.state.date.title}
-                day={this.state.date.day}
-                news={this.state.date.news}
+                util={date.util}
+                catemenu={date.catemenu}
+                title={date.title}
+                day={date.day}
+                news={date.news}
               />
             <div className={cx('disDetailList')}>
               <div className={
@@ -91,16 +145,7 @@ class DiscussionDetailPage extends Component {
                     : cx('content','left','transform')}
                   onClick={this.handleLeftChange}
                 >
-                <DiscussionDetail
-                  cate={this.state.contre.cate}
-                  background={this.state.contre.background}
-                  title={this.state.contre.title}
-                  subTitle={this.state.contre.subTitle}
-                  img={this.state.contre.img}
-                  subImg={this.state.contre.subImg}
-                  text01={this.state.contre.text01}
-                  text02={this.state.contre.text02}
-                />
+                {loading ? this.renderDetial1() : "Loading"}
               </div>
               <div className={
                   this.state.toggle ?
@@ -108,16 +153,7 @@ class DiscussionDetailPage extends Component {
                   : cx('content','right','transform','on')}
                   onClick={this.handleRightChange}
                 >
-                <DiscussionDetail
-                  cate={this.state.pour.cate}
-                  background={this.state.pour.background}
-                  title={this.state.pour.title}
-                  subTitle={this.state.pour.subTitle}
-                  img={this.state.pour.img}
-                  subImg={this.state.pour.subImg}
-                  text01={this.state.pour.text01}
-                  text02={this.state.pour.text02}
-                />
+                {loading ? this.renderDetial2() : "Loading"}
               </div>
             </div>
           </div>

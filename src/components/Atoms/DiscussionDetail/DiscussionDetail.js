@@ -14,7 +14,7 @@ const DiscussionDetail = ({background, cate, title, subTitle, text01, text02, im
         <div className={cx('detailText')}>
           <div className={cx('text01','scroll')}>
             <div className={cx('mainImg')}>
-              <img src={img}  alt="thumb"/>
+              <img src={`/assets/${img}`}  alt="thumb"/>
             </div>
             <div className={cx('subTitle')}>{subTitle}</div>
             <div className={cx('text')}>{text01}</div>
@@ -22,7 +22,7 @@ const DiscussionDetail = ({background, cate, title, subTitle, text01, text02, im
           <div className={cx('text02','scroll')}>
             <div className={cx('text')}>{text02}</div>
             <div className={cx('subImg')}>
-              <img src={subImg}  alt="thumb"/>
+              <img src={`/assets/${subImg}`}  alt="thumb"/>
             </div>
           </div>
         </div>

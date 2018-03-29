@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './DiscussionSubPage.scss';
 import { HeadUtil, DiscussionSub } from '../../Atoms';
 import { Navigate } from '../../Molecules';
+
 const cx = classNames.bind(styles);
 
 class DiscussionSubPage extends Component {
@@ -16,24 +17,9 @@ class DiscussionSubPage extends Component {
           day:"Publication on 2017. 11. 30 ",
           news:""
         },
-      discontent:[],
-      contre:{
-              url:"contre",
-              background:true,
-              cate:"CONTRE",
-              subTitle:"L’élection surprise de Donald Trump provoque une nouvelle onde de choc",
-              img:"/assets/dummy-discussion-0.png",
-              text:`Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges. Replacing inkjet cartridge can add to a very big cost. It could be worse if you have to replace the empty cartridges frequently every month. Nowadays many buyers are making use of compatible Inkjet Cartridges as they are less expensive and are easilyavailable online. These compatible inkjet cartridges are available from the third party at a much lower price. These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins to dry and finally clogs the nozzle. You can refill the cartridge once it reaches its wear out condition. Always remember to  color.easilyavailable online. These compatible inkjet cartridges are available from the third party at a much lower price. These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins to dry and finally clogs the nozzle. You can refill the cartridge once it reaches its wear out condition. Always remember to refill the cartridge as early as possible.With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.`,
-          },
-      pour:{
-              url:"pour",
-              background:false,
-              cate:"POUR",
-              subTitle:"L’élection surprise de Donald Trump provoque une nouvelle onde de choc",
-              img:"/assets/dummy-discussion-1.png",
-              text:`Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges. Replacing inkjet cartridge can add to a very big cost. It could be worse if you have to replace the empty cartridges frequently every month. Nowadays many buyers are making use of compatible Inkjet Cartridges as they are less expensive and are easilyavailable online. These compatible inkjet cartridges are available from the third party at a much lower price. These cartridges can be replaced by the printer ink of similar brand. Compatible Inkjet Cartridge will help you to make extra-ordinary savings with money back guarantee. As soon as the cartridge gets empty the ink that it contains begins to dry and finally clogs the nozzle. You can refill the cartridge once it reaches its wear out condition. Always remember to refill the cartridge as early as possible.With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.With Compatible Inkjet Cartridge you do not need to sacrifice the quality of your printer. It works with excellent efficiency that not only offers you quality output but it also maintains the quality of your printer for a longer period of time. Get Compatible Inkjet Cartridge for any printer that uses ink of any color.`,
-          },
+      discontent:{},
     }
+    this.renderDiscussion = this.renderDiscussion.bind(this);
   }
   componentDidMount(){
     this.discontentData();
@@ -51,9 +37,34 @@ class DiscussionSubPage extends Component {
      .then(json => json.debat)
      .catch(err => console.log(err))
   }
+  renderDiscussion = () => {
+    const paramsId =  Number(this.props.match.params.id.slice(1))
+    const detail1 = this.state.discontent[paramsId].detail1
+    const detail2 = this.state.discontent[paramsId].detail2
+    return [
+    <DiscussionSub
+      key={1}
+      url={detail1.url}
+      background={detail1.background}
+      cate={detail1.cate}
+      subTitle={detail1.subTitle}
+      img={detail1.img}
+      text01={detail1.text01}
+      id={this.state.discontent[paramsId].id}
+      />,
+      <DiscussionSub
+        key={2}
+        url={detail2.url}
+        background={detail2.background}
+        cate={detail2.cate}
+        subTitle={detail2.subTitle}
+        img={detail2.img}
+        text01={detail2.text01}
+        id={this.state.discontent[paramsId].id}
+        />
+    ]
+  }
     render() {
-      const paramsId = Number(this.props.match.params.id.slice(1));
-      const {discontent} = this.state
         return(
           <div className={cx('wrapper')}>
             <Navigate idx={3}/>
@@ -65,22 +76,11 @@ class DiscussionSubPage extends Component {
                 news={this.state.date.news}
               />
             <div className={cx('disSubList')}>
-                <DiscussionSub
-                  url={this.state.contre.url}
-                  background={this.state.contre.background}
-                  cate={this.state.contre.cate}
-                  subTitle={this.state.contre.subTitle}
-                  img={this.state.contre.img}
-                  text={this.state.contre.text}
-                  />
-                <DiscussionSub
-                  url={this.state.pour.url}
-                  background={this.state.pour.background}
-                  cate={this.state.pour.cate}
-                  subTitle={this.state.pour.subTitle}
-                  img={this.state.pour.img}
-                  text={this.state.pour.text}
-                  />
+              {this.state.loading?
+                this.renderDiscussion()
+                :
+                "loading"
+              }
             </div>
           </div>
         );
