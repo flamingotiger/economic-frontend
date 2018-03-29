@@ -8,7 +8,7 @@
        "leftThumb":"dummy-main-0.png",
        "rightImg":"dummy-discussion-1.png",
        "rightThumb":"dummy-main-01.png",
-       "debats":[
+       "detail":[
          {
            "url":"contre",
            "background":true,
@@ -35,7 +35,7 @@
        "leftThumb":"dummy-main-0.png",
        "rightImg":"dummy-discussion-1.png",
        "rightThumb":"dummy-main-01.png",
-       "debats":[
+       "detail":[
          {
            "url":"contre",
            "background":true,
@@ -62,7 +62,7 @@
        "leftThumb":"dummy-main-0.png",
        "rightImg":"dummy-discussion-1.png",
        "rightThumb":"dummy-main-01.png",
-       "debats":[
+       "detail":[
          {
            "url":"contre",
            "background":true,
@@ -89,7 +89,7 @@
        "leftThumb":"dummy-main-0.png",
        "rightImg":"dummy-discussion-1.png",
        "rightThumb":"dummy-main-01.png",
-       "debats":[
+       "detail":[
          {
            "url":"contre",
            "background":true,
@@ -116,7 +116,7 @@
        "leftThumb":"dummy-main-0.png",
        "rightImg":"dummy-discussion-1.png",
        "rightThumb":"dummy-main-01.png",
-       "debats":[
+       "detail":[
          {
            "url":"contre",
            "background":true,
