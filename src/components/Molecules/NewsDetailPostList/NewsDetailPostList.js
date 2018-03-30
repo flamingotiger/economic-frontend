@@ -14,6 +14,7 @@ class NewsDetailPostList extends Component {
 }
 renderPost = () => {
   const content = this.props.content
+  const {paramsDate} = this.props
   return [
     <NewsDetailPost
       key={0}
@@ -22,6 +23,7 @@ renderPost = () => {
       text = {content[0].text}
       img = {content[0].img}
       url = {content[0].id}
+      paramsDate={paramsDate}
       hideText = {true}
       />,
       <NewsDetailPost
@@ -31,6 +33,7 @@ renderPost = () => {
         text = {content[1].text}
         img = {content[1].img}
         url = {content[1].id}
+        paramsDate={paramsDate}
         hideText = {true}
         />,
       <NewsDetailPost
@@ -40,6 +43,7 @@ renderPost = () => {
         text = {content[2].text}
         img = {content[2].img}
         url = {content[2].id}
+        paramsDate={paramsDate}
         hideText = {true}
         />
   ]

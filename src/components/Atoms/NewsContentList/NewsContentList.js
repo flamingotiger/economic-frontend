@@ -9,12 +9,12 @@ class NewsContentList extends Component {
     return (
       <div className={cx('list')}>
         <div className={cx('listImg')}>
-          <img src={`/assets/${this.props.img}`} alt="img"/>
+          <img src={`/assets/${this.props.img}`} alt="img" onClick={this.props.getId} data-key={this.props.id}/>
         </div>
         <div className={cx('listText')}>
           <dl>
-            <dt><span className={cx('listTitle')}>{this.props.title}</span><span>{this.props.date}</span></dt>
-            <dd>{this.props.text}</dd>
+            <dt><span className={cx('listTitle')} onClick={this.props.getId} data-key={this.props.id}>{this.props.cate}</span><span>{this.props.date}</span></dt>
+            <dd onClick={this.props.getId} data-key={this.props.id}>{this.props.subTitle}</dd>
           </dl>
         </div>
       </div>

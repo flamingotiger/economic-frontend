@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
-const HeadThumb = ({img,url}) => {
+const HeadThumb = ({img, url}) => {
   return (
       <li className={cx('thumbImg')}>
         <Link to={url}>

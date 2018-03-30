@@ -10,7 +10,9 @@ class HomeNews extends Component {
   constructor(props){
     super(props);
     this.state={
-      toggle:true
+      toggle:true,
+      content:{},
+      loading:false
   }
   this.toggle = this.toggle.bind(this);
 }
@@ -19,7 +21,29 @@ class HomeNews extends Component {
       toggle:!this.state.toggle
     });
   }
+  componentDidMount(){
+    this.contentData();
+  }
+  contentData = async () => {
+    const content = await this.callData();
+    this.setState({
+      content,
+      loading:true
+    })
+  }
+  callData = () => {
+    return fetch('https://honghakbum.github.io/economic/data.json')
+    .then(response => response.json() )
+    .then(json => json.actualites)
+    .catch(err => console.log(err))
+  }
     render() {
+      if(this.state.loading){
+        const length = (this.state.content).length - 1
+        const content = (this.state.content)[length]
+        const year = (this.state.content)[length].date.substring(0,4)
+        const month = (this.state.content)[length].date.substring(6,8)
+        console.log()
         return(
           <div className={cx('newsWrapper')}>
             <HeadUtil
@@ -28,24 +52,25 @@ class HomeNews extends Component {
               day={this.props.HomeNews.date.day}
               title={this.props.HomeNews.date.title}
               />
-            <HomeTitle homeTitle={this.props.HomeNews.content.homeTitle}/>
-            <HomeSubTitle subTitle={this.props.HomeNews.content.subTitle}/>
-            <HomeSubTitle subTitle={this.props.HomeNews.content.subTitle}/>
+            <HomeTitle homeTitle={content.newsTitle}/>
+            <HomeSubTitle subTitle={content.subTitle}/>
             <div className={cx('newsContent')} onClick={this.toggle}>
               <div className={this.state.toggle ? cx('blur','transform') : cx('blur','transform','on') }>
-                <Link to="/news">
-                <span>{this.props.HomeNews.content.clickText}</span>
+                <Link to={`/news/list=${year + month}`}>
+                <span>{content.subTitle}</span>
               </Link>
               </div>
               <div className={cx('text')}>
                   <div className={cx('category')}>ECONOMIC</div>
-                  <span>{this.props.HomeNews.content.text01}</span>
-                  <div><img src={this.props.HomeNews.content.img} alt="columnImg"/></div>
-                  <span>{this.props.HomeNews.content.text02}</span>
+                  <span>{content.text}</span>
+                  <div><img src={`/assets/${content.img}`} alt="columnImg"/></div>
+                  <span>{content.text}</span>
               </div>
             </div>
           </div>
-        );
+        );}else{
+          return (<div>Loading</div>)
+        }
     }
 }
 export default HomeNews;
