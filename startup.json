@@ -1,5 +1,6 @@
 {
-  "one":{
+  "startup":{
+    "date":201710,
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
@@ -47,7 +48,8 @@
         }
     ]
   },
-  "two":{
+  "startup":{
+    "date":201711,
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
@@ -95,7 +97,8 @@
         }
     ]
   },
-  "three":{
+  "startup":{
+    "date":201712,
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
