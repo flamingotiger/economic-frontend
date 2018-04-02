@@ -1,5 +1,5 @@
 {
-  "201710":[
+  "201710":{
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
@@ -7,47 +7,47 @@
     ],
     "menuList":[
       {
-          id:1,
-          text:"201710Leader du marché de voiture electrique"
+          "id":1,
+          "text":"201710 Leader du marché de voiture electrique"
         },
         {
-          id:2,
-          text:"201710Leader du marché de voiture electrique"
+          "id":2,
+          "text":"201710 Leader du marché de voiture electrique"
         },
         {
-          id:3,
-          text:"201710Leader du marché de voiture electrique"
+          "id":3,
+          "text":"201710 Leader du marché de voiture electrique"
         },
         {
-          id:4,
-          text:"201710Leader du marché de voiture electrique"
+          "id":4,
+          "text":"201710 Leader du marché de voiture electrique"
         }
     ],
     "content":[
        {
-          id:1,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":1,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:2,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":2,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:3,
-          title:"Leader du marché de voiture electrique ",
-          img:"/assets/dummy-start_up2.png",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":3,
+          "title":"Leader du marché de voiture electrique ",
+          "img":"/assets/dummy-start_up2.png",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:4,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":4,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         }
     ]
-  ],
-  "201711":[
+  },
+  "201711":{
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
@@ -55,47 +55,47 @@
     ],
     "menuList":[
       {
-          id:1,
-          text:"201711Leader du marché de voiture electrique"
+          "id":1,
+          "text":"201711 Leader du marché de voiture electrique"
         },
         {
-          id:2,
-          text:"201711Leader du marché de voiture electrique"
+          "id":2,
+          "text":"201711 Leader du marché de voiture electrique"
         },
         {
-          id:3,
-          text:"201711Leader du marché de voiture electrique"
+          "id":3,
+          "text":"201711 Leader du marché de voiture electrique"
         },
         {
-          id:4,
-          text:"201711Leader du marché de voiture electrique"
+          "id":4,
+          "text":"201711 Leader du marché de voiture electrique"
         }
     ],
     "content":[
        {
-          id:1,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":1,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:2,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":2,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:3,
-          title:"Leader du marché de voiture electrique ",
-          img:"/assets/dummy-start_up2.png",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":3,
+          "title":"Leader du marché de voiture electrique ",
+          "img":"/assets/dummy-start_up2.png",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:4,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":4,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         }
     ]
-  ],
-  "201711":[
+  },
+  "201712":{
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
@@ -103,45 +103,45 @@
     ],
     "menuList":[
       {
-          id:1,
-          text:"201712Leader du marché de voiture electrique"
+          "id":1,
+          "text":"201712 Leader du marché de voiture electrique"
         },
         {
-          id:2,
-          text:"201712Leader du marché de voiture electrique"
+          "id":2,
+          "text":"201712 Leader du marché de voiture electrique"
         },
         {
-          id:3,
-          text:"201712Leader du marché de voiture electrique"
+          "id":3,
+          "text":"201712 Leader du marché de voiture electrique"
         },
         {
-          id:4,
-          text:"201712Leader du marché de voiture electrique"
+          "id":4,
+          "text":"201712 Leader du marché de voiture electrique"
         }
     ],
     "content":[
        {
-          id:1,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":1,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:2,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":2,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:3,
-          title:"Leader du marché de voiture electrique ",
-          img:"/assets/dummy-start_up2.png",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":3,
+          "title":"Leader du marché de voiture electrique ",
+          "img":"/assets/dummy-start_up2.png",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         },
         {
-          id:4,
-          title:"Leader du marché de voiture electrique ",
-          text:"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
+          "id":4,
+          "title":"Leader du marché de voiture electrique ",
+          "text":"You might remember the Dell computer commercials in which a youth reports this exciting news to his friends that they are about to get their new computer by telling them, “Dude, you’re getting a Dell!” It was a cute series but it reflects the excitement young people get about anything new, particularly if it’s a new machine."
         }
     ]
-  ]
+  }
   
 }
