@@ -50,13 +50,12 @@ renderPost = () => {
 }
     render() {
     const {loading} = this.props
+    if(!loading){
+      return null
+    }
         return(
-          <ul className={cx('postList')}>
-            {loading ?
-              this.renderPost()
-             :
-              "loading"
-            }
+          <ul className={cx('postList')} onClick={this.props.postClick}>
+              {this.renderPost()}
           </ul>
         );
     }

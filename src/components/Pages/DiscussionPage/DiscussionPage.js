@@ -66,6 +66,9 @@ class DiscussionPage extends Component {
           });
       };
       const {discontent, loading} = this.state
+      if(!loading){
+        return null
+      }
         return(
           <div className={cx('disWrapper')}>
             <Navigate idx={3}/>
@@ -90,7 +93,7 @@ class DiscussionPage extends Component {
                 </div>
                 </div>
                 <ul className={cx('listContainer')}>
-                  {loading ? mapToComponents(discontent) : null}
+                  {mapToComponents(discontent)}
                 </ul>
               </div>
           </div>

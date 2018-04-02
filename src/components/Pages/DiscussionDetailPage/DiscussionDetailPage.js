@@ -128,6 +128,9 @@ class DiscussionDetailPage extends Component {
 
     render() {
       const {loading, date} = this.state
+      if(!loading){
+        return null
+      }
         return(
           <div className={cx('disDetailwrapper')}>
             <Navigate idx={3}/>
@@ -145,7 +148,7 @@ class DiscussionDetailPage extends Component {
                     : cx('content','left','transform')}
                   onClick={this.handleLeftChange}
                 >
-                {loading ? this.renderDetial1() : "Loading"}
+                { this.renderDetial1() }
               </div>
               <div className={
                   this.state.toggle ?
@@ -153,7 +156,7 @@ class DiscussionDetailPage extends Component {
                   : cx('content','right','transform','on')}
                   onClick={this.handleRightChange}
                 >
-                {loading ? this.renderDetial2() : "Loading"}
+                { this.renderDetial2() }
               </div>
             </div>
           </div>

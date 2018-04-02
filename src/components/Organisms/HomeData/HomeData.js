@@ -69,6 +69,7 @@ class HomeData extends Component {
     }
   }
     render() {
+      console.log(this.props)
       const options={
         legend:{
           display:false,
@@ -93,15 +94,16 @@ class HomeData extends Component {
           ],
         }
       }
+      const {content, keyword, chartData} = this.state;
         return(
           <div className={cx('homeData')}>
-            <HomeTitle homeTitle={this.state.content.homeTitle}/>
+            <HomeTitle homeTitle={content.homeTitle}/>
             <div className={cx('homeDataWrapper')}>
               <div className={cx('search')}>
                 <div className={cx('searchInput')}>
                   <input
                     name="keyword"
-                    value={this.state.keyword}
+                    value={keyword}
                     placeholder="search"
                     onChange={this.handleChange}
                     onKeyPress={this.handleKeyPress}
@@ -111,7 +113,7 @@ class HomeData extends Component {
               </div>
               <div className={cx('chartContainer')}>
                 <Line
-                  data={this.state.chartData}
+                  data={chartData}
                   options={options}
                   />
               </div>

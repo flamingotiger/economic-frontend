@@ -20,24 +20,26 @@ toggle = () => {
   });
 }
     render() {
+      const {HomeDiscussion} = this.props;
+      const {toggle} = this.state;
         return(
           <div className={cx('newsWrapper')}>
-            <HomeDiscussionTitle HomeDiscussionTitle={this.props.HomeDiscussion.content.HomeDiscussionTitle}/>
+            <HomeDiscussionTitle HomeDiscussionTitle={HomeDiscussion.content.HomeDiscussionTitle}/>
             <div className={cx('newsContent')} onClick={this.toggle}>
               <div className={cx('text')}>
-                <div className={this.state.toggle ? cx('blur','transform') : cx('blur','transform','on') }>
+                <div className={toggle ? cx('blur','transform') : cx('blur','transform','on') }>
                   <Link to="/discussion">
-                  <span>{this.props.HomeDiscussion.content.clickText}</span>
+                  <span>{HomeDiscussion.content.clickText}</span>
                   </Link>
                 </div>
                 <div className={cx('column','column1')}>
-                  <img src={this.props.HomeDiscussion.content.img} alt="columnImg"/>
+                  <img src={HomeDiscussion.content.img} alt="columnImg"/>
                 </div>
                 <div className={cx('column','column2')}>
-                  {this.props.HomeDiscussion.content.text}
+                  {HomeDiscussion.content.text}
                 </div>
                 <div className={cx('column','column3')}>
-                  <img src={this.props.HomeDiscussion.content.img} alt="columnImg"/>
+                  <img src={HomeDiscussion.content.img} alt="columnImg"/>
                 </div>
               </div>
             </div>

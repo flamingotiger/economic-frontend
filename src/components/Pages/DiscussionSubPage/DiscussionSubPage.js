@@ -65,6 +65,10 @@ class DiscussionSubPage extends Component {
     ]
   }
     render() {
+      const {loading} = this.state;
+      if(!loading){
+        return null
+      }
         return(
           <div className={cx('wrapper')}>
             <Navigate idx={3}/>
@@ -76,11 +80,7 @@ class DiscussionSubPage extends Component {
                 news={this.state.date.news}
               />
             <div className={cx('disSubList')}>
-              {this.state.loading?
-                this.renderDiscussion()
-                :
-                "loading"
-              }
+              {this.renderDiscussion()}
             </div>
           </div>
         );
