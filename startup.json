@@ -23,7 +23,7 @@
           "text":"201710 Leader du marché de voiture electrique"
         }
     ],
-    "two":[
+    "content":[
        {
           "id":1,
           "title":"Leader du marché de voiture electrique ",
@@ -47,7 +47,7 @@
         }
     ]
   },
-  "three":{
+  "two":{
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
@@ -95,7 +95,7 @@
         }
     ]
   },
-  "four":{
+  "three":{
     "menuImg":[
         "/dummy-start_up.png",
         "/dummy-start_up.png",
