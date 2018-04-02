@@ -1,5 +1,5 @@
 {
-  "BYD1":{
+  "byd1":{
     "date":201710,
     "menuImg":[
         "/dummy-start_up.png",
@@ -48,7 +48,7 @@
         }
     ]
   },
-  "BYD2":{
+  "byd2":{
     "date":201711,
     "menuImg":[
         "/dummy-start_up.png",
@@ -97,7 +97,7 @@
         }
     ]
   },
-  "BYD3":{
+  "byd3":{
     "date":201712,
     "menuImg":[
         "/dummy-start_up.png",
