@@ -13,6 +13,7 @@
 - react-scroll-horizontal
 - react-scroll (목차)
 - es6
+- react-mailchimp-subscribe(email)
 
 ### webpack설정
 - sass-loader추가
