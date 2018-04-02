@@ -1,0 +1,21 @@
+.footer{
+  width:100%;
+  background: #dfe2d9;
+  .footerInner{
+    width:15.7rem;
+    margin:auto;
+    background: #e9e9e7;
+    .footerText{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      div{
+        a{
+          color:#6e6e6e;
+        }
+        text-align: center;
+        padding:1rem 0;
+        font:1.4rem/1.8rem "IBMPlexSans","sans-serif";
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.list{cursor:pointer; display: flex; margin-top:2.5rem; margin-bottom:2.5rem; height:12rem;}
+
+.listImg{width:18rem; height:12rem;}
+.listText{
+  margin-top:2.9rem;
+  margin-left:3.5rem;
+  dt{
+    .listTitle{
+      margin-right:1.7rem;
+      font:bold 1.4rem/1.8rem "IBMPlexSans","sans-serif";
+      color:#122491;
+    }
+    font:1rem/1.3rem "IBMPlexSans","sans-serif";
+  }
+  dd{margin-top:0.9rem; font:1.4rem/1.8rem "IBMPlexSans","sans-serif";}
+
+}

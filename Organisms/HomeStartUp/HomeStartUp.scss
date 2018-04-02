@@ -1,0 +1,48 @@
+.startUpWrapper{
+  width:118rem;
+  margin:auto;
+  margin-bottom:1.7rem;
+}
+.startUpContent{
+  position:relative;
+  margin-top:1rem;
+  .blur.transform{
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .blur{
+    position:absolute;
+    top:0;
+    left:0;
+    text-align: center;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    opacity: 0;
+    span{
+      display: none;
+      color:#ffffff;
+      font:2.4rem/60rem "IBMPlexSans","sans-serif";
+    }
+  }
+  .blur.on{
+    span{
+      display: inline;
+      color:#ffffff;
+      font:2.4rem/60rem "IBMPlexSans","sans-serif";
+    }
+    position:absolute;
+    text-align: center;
+    top:0;
+    left:0;
+    opacity: 1;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+  }
+}

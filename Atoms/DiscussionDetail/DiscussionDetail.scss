@@ -1,0 +1,72 @@
+.thumbImg{
+  position: relative;
+  width:116rem;
+  margin:auto;
+  .scroll{
+      max-height:69rem;
+      overflow: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+      width: 0px;  /* remove scrollbar space */
+      background: transparent;  /* optional: just make scrollbar invisible */
+    }
+  }
+  .cate{
+    position: absolute;
+    left:13rem;
+    width:8rem;
+    height:4rem;
+    font:bold 1.4rem/4rem "IBMPlexSans","sans-serif";
+    color:#710C0C;
+    background: #ffffff;
+  }
+  .title.red{
+    .cate{
+      color:#710C0C;
+      background: #ffffff;
+    }
+    background: #710c0c;
+  }
+  .title.blue{
+    .cate{
+      color:#0b0494;
+      background: #ffffff;
+    }
+    background: #0b0494;
+  }
+  .title{
+    width:100%;
+    background:#710C0C;
+    height:4rem;
+    font:normal 2.8rem/4rem "IBMPlexSans","sans-serif";
+    color:#ffffff;
+    text-align:center;
+  }
+  .detailText{
+    display: flex;
+  }
+  .subTitle{
+    color:#000000;
+    font:bold 2.4rem/3.1rem "IBMPlexSans","sans-serif";
+    margin-top:0.5rem;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+  }
+  .subImg{
+    margin:1.6rem 0;
+  }
+  .text{
+    margin-top:1.6rem;
+    color:#000000;
+    font:1.4rem/1.6rem "IBMPlexSans","sans-serif";
+    text-align: justify;
+  }
+  .text01{
+    flex:1;
+    margin-right:2rem;
+  }
+  .text02{
+    flex:1;
+    margin-left:2rem;
+  }
+}

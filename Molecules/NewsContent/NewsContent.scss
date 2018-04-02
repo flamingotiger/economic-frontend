@@ -1,0 +1,26 @@
+.hideImgContainer{
+  max-height:50rem;
+  margin-top:1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+    &::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
+}
+.detailContainer{
+  max-height:84rem;
+  margin-top:1rem;
+  overflow: scroll;
+  overflow-x: hidden;
+    &::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
+}
+
+.detailTxt{
+  margin-top:2.8rem;
+  font:1.4rem/2rem "IBMPlexSans","sans-serif";
+  text-align: justify;
+}

@@ -1,0 +1,52 @@
+.thumbImg{
+  position: relative;
+  overflow: hidden;
+  width:100rem;
+  margin:auto;
+  .title{
+    width:100%;
+    background:#ffffff;
+    height:5rem;
+    font:1.8rem/5rem "IBMPlexSans","sans-serif";
+    color:#000000;
+    text-align:center;
+  }
+}
+.imgWrapper{
+  height:34rem;
+  display: flex;
+  .date{
+    z-index:100;
+    position:absolute;
+    text-align:center;
+    background:#000000;
+    height:4rem;
+    margin-left:-8.7rem;
+    color:#ffffff;
+    font:1.8rem/4rem "IBMPlexSans","sans-serif";
+    width:17.4rem;
+    bottom:17.1rem;
+    left:50%;
+  }
+  .img{
+    flex:1;
+    position:relative;
+    img{
+      width:100%;
+      height:100%;
+    }
+    .thumb{
+      position:absolute;
+      img{
+        width:8.7rem;
+        height:12.1rem;
+      }
+    }
+    .thumbLeft{
+      right:0; bottom:0;
+    }
+    .thumbRight{
+      left:0; bottom:0;
+    }
+  }
+}

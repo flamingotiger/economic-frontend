@@ -1,0 +1,64 @@
+  .homeData{
+    width:118rem;
+    margin:auto;
+    margin-bottom:7.2rem;
+  }
+
+.searchInput{
+  width:40rem;
+  height:4rem;
+  border:0.1rem solid #000000;
+  background: #ffffff;
+  box-sizing: border-box;
+  input{
+    width:38rem;
+    height:2.5rem;
+    margin-top:0.5rem;
+    margin-left:0.5rem;
+    border:0 none;
+    background:none;
+    font:1.4rem/1.8rem "IBMPlexSans","sans-serif";
+  }
+}
+  .homeDataWrapper{
+    position:relative;
+    margin-top: 3.2rem;
+    width:118rem;
+    height:50rem;
+    background: url('/assets/dummy-home-data.png') no-repeat;
+    background-size: cover;
+  }
+  .search{
+    position:absolute;
+    left:50%;
+    top:5rem;
+    margin:auto;
+    margin-left:-20rem;
+    width:40rem;
+    margin-top:1.1rem;
+    margin-bottom:2.3rem;
+    &::after{
+      content: "";
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      margin-top: -0.4rem;
+      width: 1.7rem;
+      height: 0.8rem;
+      background: url(/assets/btn-down-data.svg) no-repeat;
+    }
+  }
+.chartContainer{
+  position:absolute;
+  top:14rem;
+  left:50%;
+  margin-left:-55rem;
+  width:110rem; height:30.8rem;
+  background: rgba(255,255,255,0.8);
+  canvas{
+    width: 101.2rem !important;
+    height: 27.8rem !important;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  }

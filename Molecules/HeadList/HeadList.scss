@@ -1,0 +1,40 @@
+.headList.on{
+  position:absolute;
+  width:100%;
+  top:4rem;
+  z-index:700;
+  width:100%;
+  background: #ffffff;
+  height:20rem;
+  opacity: 1;
+  //display:block대신
+  visibility:visible;
+}
+.headContainer{
+  width:113rem;
+  height:20rem;
+  margin:auto;
+  margin-top: 2rem;
+}
+.headhThumb{
+  width:10.4rem; height:13.2rem;
+}
+.transform{
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.headList{
+  position:absolute;
+  width:100%;
+  z-index:700;
+  top:0;
+  background: #ffffff;
+  height:20rem;
+  opacity: 0;
+
+  //display:none대신
+  visibility:hidden;
+}

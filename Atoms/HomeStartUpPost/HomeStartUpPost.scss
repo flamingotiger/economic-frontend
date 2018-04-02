@@ -1,0 +1,19 @@
+.post{
+  margin:1rem;
+  .img{
+    height:26rem;
+  }
+  .subTitle{
+    color: #791D1B;
+    font:bold 1.8rem/2.2rem "IBMPlexSans","sans-serif";
+    margin-top:2.6rem;
+    margin-bottom:2.2rem;
+    text-align: justify;
+  }
+  .text{
+    font:1.4rem/1.6rem "IBMPlexSans","sans-serif";
+    text-align: justify;
+    height:30rem;
+    overflow: hidden;
+  }
+}

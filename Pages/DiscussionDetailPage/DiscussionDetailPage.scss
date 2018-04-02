@@ -1,0 +1,45 @@
+.disDetailwrapper{
+  overflow-x:hidden;
+}
+.disDetailList{
+  position: relative;
+  width:116.2rem;
+  height:84rem;
+  margin:auto;
+}
+.content{
+  position:absolute;
+}
+
+.left.on{
+  left:0;
+  width:116.2rem;
+  opacity: 1;
+  transform: scale(1);
+}
+.left{
+  left:-100%;
+  width:116.2rem;
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+
+.right{
+  right:-100%;
+  width:116.2rem;
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+.right.on{
+  right:0;
+  width:116.2rem;
+  opacity: 1;
+  transform: scale(1);
+}
+.transform{
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
