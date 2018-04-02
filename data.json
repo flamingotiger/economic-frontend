@@ -73,7 +73,7 @@
   ],
    "news201712":[
       {
-        "id":5,
+        "id":0,
         "cate":"ECONOMIC",
         "newsTitle":"4L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-5.png",
@@ -87,7 +87,7 @@
         "subTitle":"5What Makes Flyers Unrivaled What Makes Flyers Unrivaled"
       },
       {
-        "id":6,
+        "id":1,
         "cate":"POLITIQUE",
         "newsTitle":"3L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-6.png",
@@ -101,7 +101,7 @@
         "subTitle":"6What Makes Flyers Unrivaled What Makes Flyers Unrivaled"
       },
       {
-        "id":7,
+        "id":2,
         "cate":"POLITIQUE",
         "newsTitle":"2L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-7.png",
@@ -115,7 +115,7 @@
         "subTitle":"7What Makes Flyers Unrivaled What Makes Flyers Unrivaled"
       },
       {
-        "id":8,
+        "id":3,
         "cate":"POLITIQUE",
         "newsTitle":"1L’élection surprise de Donald Trump provoque une nouvelle onde de choc surprise de Donald Trump ",
         "img":"dummy-main-4.png",
