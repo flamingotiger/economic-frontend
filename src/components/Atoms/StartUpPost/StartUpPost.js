@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-const StartUpPost = ({title, img}) => {
+const StartUpPost = ({title, img, url}) => {
   return (
-    <Link to='/startup/detail'>
+    <Link to={`/startup/detail=${url}`}>
     <li className={cx('thumbPost')}>
       <div className={cx('img')}><img src={img} alt="img"/></div>
       <div className={cx('title')}>{title}</div>

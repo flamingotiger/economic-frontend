@@ -25,8 +25,11 @@
   //display: block;
   opacity: 1;
   .navBgTop{
-    position: absolute; left:50%; top:0; margin-left:-16.6rem;
-    width:34.2rem; height: 44.7rem;
+    position: absolute; left:50%; top:0;
+    margin-left: -18.6rem;
+    width: 37.2rem;
+    height: 48.7rem;
+    //width:34.2rem; height: 44.7rem;  margin-left:-16.6rem;
     background: url('/assets/img-main-nav-1.png') no-repeat;
     z-index:-1;
     ul{margin-top: 5.7rem;}
@@ -40,8 +43,11 @@
     }
   }
   .navBgBotton{
-    position: absolute; left:50%; bottom:0; margin-left:-16.6rem;
-    width:34.2rem; height: 44.7rem;
+    position: absolute; left:50%; bottom:0;
+    margin-left: -18.6rem;
+    width: 37.2rem;
+    height: 44.7rem;
+    //margin-left:-16.6rem; width:34.2rem; height: 44.7rem;
     background: url('/assets/img-main-nav.png') no-repeat;
     z-index:-1;
     ul{margin-top:20.8rem;}
@@ -64,8 +70,11 @@
   transition: all 2s ease;
   opacity: 0;
   .navBgTop{
-    position: absolute; left:50%; top:-50%; margin-left:-16.6rem;
-    width:34.2rem; height: 44.7rem;
+    position: absolute; left:50%; top:-50%;
+    margin-left: -18.6rem;
+    width: 37.2rem;
+    height: 48.7rem;
+    //width:34.2rem; height: 44.7rem;  margin-left:-16.6rem;
     background: url('/assets/img-main-nav-1.png') no-repeat;
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
@@ -83,8 +92,11 @@
     }
   }
   .navBgBotton{
-    position: absolute; left:50%; bottom:-50%; margin-left:-16.6rem;
-    width:34.2rem; height: 44.7rem;
+    position: absolute; left:50%; bottom:-50%;
+    margin-left: -18.6rem;
+    width: 37.2rem;
+    height: 44.7rem;
+    //margin-left:-16.6rem; width:34.2rem; height: 44.7rem;
     background: url('/assets/img-main-nav.png') no-repeat;
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;

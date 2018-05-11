@@ -12,7 +12,7 @@ class Slide extends Component{
     return(
       <div className={cx('slideImg')}>
         <dl className={cx('sliderTxt')}>
-          <Link to="news/list">
+          <Link to="news">
             <dt className={cx('sliderTitle')}>{title}</dt>
             <dd className={cx('sliderDate')}>{date}</dd>
           </Link>

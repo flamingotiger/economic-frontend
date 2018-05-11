@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-const DiscussionList = ({date, title, leftImg, leftThumb, rightImg, rightThumb}) => {
+const DiscussionList = ({date, title, leftImg, leftThumb, rightImg, rightThumb, url}) => {
   return (
       <div className={cx('thumbImg')}>
-        <Link to="/discussion/sub">
+        <Link to={`/discussion/sub:${url}`}>
         <div className={cx('imgWrapper')}>
           <div className={cx('img')}>
-            <img src={leftImg}  alt="backImg"/>
+            <img src={`/assets/${leftImg}`}  alt="backImg"/>
             <div className={cx('thumbLeft','thumb')}>
-              <img src={leftThumb} alt="thumb"/>
+              <img src={`/assets/${leftThumb}`} alt="thumb"/>
             </div>
           </div>
             <div className={cx('date')}>{date}</div>
           <div className={cx('img')}>
-            <img src={rightImg}  alt="backImg"/>
+            <img src={`/assets/${rightImg}`}  alt="backImg"/>
             <div className={cx('thumbRight','thumb')}>
-              <img src={rightThumb}  alt="thumb"/>
+              <img src={`/assets/${rightThumb}`}  alt="thumb"/>
             </div>
           </div>
         </div>

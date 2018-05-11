@@ -9,7 +9,7 @@ import NewsTitle from './NewsTitle';
 import Subscribe from './Subscribe';
 import NewsContentList from './NewsContentList';
 import NewsDetailPost from './NewsDetailPost';
-import NewsListPost from './NewsListPost';
+import NewsPost from './NewsPost';
 import StartUpPost from './StartUpPost';
 import DiscussionList from './DiscussionList';
 import DiscussionSub from './DiscussionSub';
@@ -32,7 +32,7 @@ export {
   Subscribe,
   NewsContentList,
   NewsDetailPost,
-  NewsListPost,
+  NewsPost,
   StartUpPost,
   StartUpScroll,
   DiscussionSub,

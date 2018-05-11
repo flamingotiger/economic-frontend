@@ -11,7 +11,7 @@ class ContactSuccess extends Component {
     super(props);
     this.state={
       date : {
-          util:"11111MAG 119 ",
+          util:"MAG 119 ",
           catemenu:"« REVUE ECONOMIQUE »",
           title:"",
           day:"Publication on 2017. 11. 30 ",

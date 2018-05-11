@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-const DiscussionSub = ({cate, subTitle, img, text, background, url}) => {
+const DiscussionSub = ({cate, subTitle, img, text01, background, url, id}) => {
   return (
       <div className={cx('sublist')}>
-        <Link to={`/discussion/sub/detail:${url}`}>
+        <Link to={`/discussion/sub/detail:${url}${id}`}>
         <div className={background ? cx('title','red') : cx('title','blue')}>{cate}</div>
         <div className={cx('scroll')}>
-          <img src={img}  alt="img"/>
+          <img src={`/assets/${img}`}  alt="img"/>
           <div className={cx('subTitle')}>{subTitle}</div>
-          <div className={cx('text')}>{text}</div>
+          <div className={cx('text')}>{text01}</div>
         </div>
       </Link>
       </div>

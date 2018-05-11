@@ -4,10 +4,10 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
-const HeadThumb = ({img,url}) => {
+const HeadThumb = ({img, url, news}) => {
   return (
       <li className={cx('thumbImg')}>
-        <Link to={url}>
+        <Link to={news? `/news/list=${url}` : `/startup/detail=${url}`}>
         <div className={cx('blur','transform')}>
           <span>VOIR<br/>TOUT</span>
         </div>
